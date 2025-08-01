@@ -3,102 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin Official</title>
+  <title>Alpcoin</title>
+  <link rel="icon" href="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" />
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: url('https://i.ibb.co/YX8ZWh9/mountain-bg.jpg') no-repeat center center fixed;
-      background-size: cover;
       font-family: Arial, sans-serif;
+      background: url('https://i.postimg.cc/vHTScNPb/mountain-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
     }
-
     .logo {
-      margin-top: 40px;
+      width: 100px;
+      border-radius: 12px;
+      margin-bottom: 20px;
     }
-
-    .logo img {
-      width: 120px;
-      border-radius: 24px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    }
-
-    h1 {
-      font-size: 42px;
-      margin: 30px 20px 10px;
-      text-shadow: 2px 2px 4px #000;
-    }
-
-    p {
-      font-size: 18px;
-      text-shadow: 1px 1px 3px #000;
-    }
-
-    .wallet-box {
-      margin-top: 30px;
-    }
-
-    .wallet-box input {
-      padding: 10px;
-      width: 320px;
-      max-width: 80%;
-      border: none;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    .wallet-box button {
-      padding: 10px 30px;
-      border: none;
-      border-radius: 10px;
-      background-color: #00b894;
-      color: white;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
     .socials {
-      margin: 30px 0;
+      margin-top: 20px;
     }
-
     .socials a {
       margin: 0 10px;
-      font-size: 24px;
       color: white;
+      font-size: 28px;
       text-decoration: none;
     }
-
-    .footer {
-      margin-top: 60px;
-      font-size: 14px;
-      color: #ccc;
+    .lang-select {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+    .lang-select button {
+      background: transparent;
+      border: none;
+      color: white;
+      margin: 0 5px;
+      cursor: pointer;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
-  <div class="logo">
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
+  <div class="lang-select">
+    <button onclick="setLang('uz')">🇺🇿</button>
+    <button onclick="setLang('ru')">🇷🇺</button>
+    <button onclick="setLang('en')">🇬🇧</button>
   </div>
 
-  <h1>Alpcoin – Tez Orada Ishga Tushadi</h1>
-  <p>Yangiliklarni kuzatib boring. Biz bilan qoling.</p>
-
-  <div class="wallet-box">
-    <input type="text" placeholder="Sizning TON wallet manzilingiz"/>
-    <br/>
-    <button>Alpcoin olish</button>
-  </div>
+  <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo"/>
+  <h1 id="title">Alpcoin bu yerda boshlanadi</h1>
 
   <div class="socials">
-    <a href="https://instagram.com/alpcoinofficial" target="_blank">Instagram</a> |
-    <a href="https://youtube.com/@alpcoinofficial" target="_blank">YouTube</a> |
-    <a href="https://twitter.com/AlpcoinGlobal" target="_blank">Twitter</a>
+    <a href="https://www.instagram.com/alpcoinofficial" target="_blank">📷</a>
+    <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶️</a>
+    <a href="https://twitter.com/AlpcoinGlobal" target="_blank">🐦</a>
   </div>
 
-  <div class="footer">
-    &copy; 2025 Alpcoin. Barcha huquqlar himoyalangan.
-  </div>
+  <script>
+    const translations = {
+      uz: {
+        title: "Alpcoin bu yerda boshlanadi"
+      },
+      ru: {
+        title: "Alpcoin начинается здесь"
+      },
+      en: {
+        title: "Alpcoin begins here"
+      }
+    };
+
+    function setLang(lang) {
+      document.getElementById("title").innerText = translations[lang].title;
+    }
+  </script>
 </body>
 </html>
