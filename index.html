@@ -1,56 +1,102 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin</title>
+  <title>Alpcoin - Official Site</title>
   <style>
     body {
-      background-color: #002244;
-      color: white;
       font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #222;
       text-align: center;
-      padding: 30px;
     }
-
-    img.logo {
-      width: 150px;
-      height: 150px;
-      border-radius: 20px;
-      margin-bottom: 20px;
+    header {
+      background-color: #1a1a2e;
+      color: white;
+      padding: 20px;
     }
-
-    h1 {
-      font-size: 36px;
+    .logo {
+      width: 100px;
       margin-bottom: 10px;
     }
-
-    p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-
     .socials a {
-      margin: 0 15px;
-      color: white;
+      margin: 0 10px;
       font-size: 24px;
+      color: #fff;
       text-decoration: none;
     }
-
     .socials a:hover {
-      text-decoration: underline;
+      color: #00f2ff;
+    }
+    .lang-select {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    main {
+      padding: 50px 20px;
+    }
+    footer {
+      background-color: #1a1a2e;
+      color: white;
+      padding: 10px;
+      font-size: 14px;
     }
   </style>
+  <script>
+    const translations = {
+      en: {
+        "main-title": "Welcome to Alpcoin",
+        "main-description": "The next-generation community-focused cryptocurrency."
+      },
+      uz: {
+        "main-title": "Alpcoin saytiga xush kelibsiz",
+        "main-description": "Kelajak avlod uchun mo‘ljallangan hamjamiyatga asoslangan kriptovalyuta."
+      },
+      ru: {
+        "main-title": "Добро пожаловать в Alpcoin",
+        "main-description": "Криптовалюта нового поколения, ориентированная на сообщество."
+      }
+    };
+
+    function changeLanguage() {
+      const lang = document.getElementById("languageSwitcher").value;
+      const elements = Object.keys(translations[lang]);
+      elements.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = translations[lang][id];
+      });
+    }
+  </script>
 </head>
 <body>
-  <img class="logo" src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo">
-  <h1>Alpcoin tez orada ishga tushadi</h1>
-  <p>Yangiliklarni kuzatib boring. Biz bilan qoling!</p>
-
-  <div class="socials">
-    <a href="https://www.instagram.com/alpcoinofficial" target="_blank">Instagram</a>
-    <a href="https://youtube.com/@alpcoinofficial?si=Tesi_G78kQVG9qYw" target="_blank">YouTube</a>
-    <a href="https://twitter.com/AlpcoinGlobal" target="_blank">Twitter</a>
+  <div class="lang-select">
+    <select id="languageSwitcher" onchange="changeLanguage()">
+      <option value="en">English</option>
+      <option value="uz">O'zbekcha</option>
+      <option value="ru">Русский</option>
+    </select>
   </div>
+
+  <header>
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo" />
+    <h1 id="main-title">Welcome to Alpcoin</h1>
+    <p id="main-description">The next-generation community-focused cryptocurrency.</p>
+    <div class="socials">
+      <a href="https://instagram.com/alpcoinofficial" target="_blank">📷</a>
+      <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶️</a>
+      <a href="https://twitter.com/AlpcoinGlobal" target="_blank">🐦</a>
+    </div>
+  </header>
+
+  <main>
+    <p>More features coming soon...</p>
+  </main>
+
+  <footer>
+    &copy; 2025 Alpcoin. All rights reserved.
+  </footer>
 </body>
 </html>
