@@ -3,163 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin</title>
+  <title>Alpcoin Official</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('https://i.postimg.cc/ZnwT8Qg8/mountain-bg.jpg') no-repeat center center fixed;
+      padding: 0;
+      background: url('https://i.ibb.co/YX8ZWh9/mountain-bg.jpg') no-repeat center center fixed;
       background-size: cover;
+      font-family: Arial, sans-serif;
       color: white;
       text-align: center;
     }
 
-    .container {
-      padding: 50px 20px;
-    }
-
     .logo {
-      max-width: 120px;
-      border-radius: 12px;
+      margin-top: 40px;
     }
 
-    h1, p {
-      margin: 10px 0;
+    .logo img {
+      width: 120px;
+      border-radius: 24px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
 
-    .socials img {
-      width: 36px;
-      margin: 0 8px;
+    h1 {
+      font-size: 42px;
+      margin: 30px 20px 10px;
+      text-shadow: 2px 2px 4px #000;
     }
 
-    select {
-      padding: 5px 10px;
-      margin-top: 15px;
+    p {
+      font-size: 18px;
+      text-shadow: 1px 1px 3px #000;
     }
 
-    form {
+    .wallet-box {
       margin-top: 30px;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 12px;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    input, textarea, button {
-      display: block;
-      width: 100%;
-      margin-top: 10px;
+    .wallet-box input {
       padding: 10px;
-      border-radius: 6px;
+      width: 320px;
+      max-width: 80%;
       border: none;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
 
-    button {
-      background-color: #4caf50;
+    .wallet-box button {
+      padding: 10px 30px;
+      border: none;
+      border-radius: 10px;
+      background-color: #00b894;
       color: white;
       cursor: pointer;
+      font-size: 16px;
     }
 
-    button:hover {
-      background-color: #45a049;
+    .socials {
+      margin: 30px 0;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo" />
-    <h1 id="welcomeText">Welcome to Alpcoin</h1>
-    <p id="comingText">Stay tuned, Alpcoin is coming!</p>
-
-    <div>
-      <label for="langSelect">🌐 Language:</label>
-      <select id="langSelect">
-        <option value="en">English</option>
-        <option value="uz">O‘zbek</option>
-        <option value="ru">Русский</option>
-      </select>
-    </div>
-
-    <h3 id="followText">Follow us on</h3>
-    <div class="socials">
-      <a href="https://instagram.com/alpcoinofficial" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"/></a>
-      <a href="https://youtube.com/@alpcoinofficial" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"/></a>
-      <a href="https://twitter.com/AlpcoinGlobal" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"/></a>
-    </div>
-
-    <form id="airdropForm">
-      <h2 id="formTitle">Join Airdrop</h2>
-      <input type="text" placeholder="Your Name" id="name" required />
-      <input type="text" placeholder="Your TON Wallet" id="wallet" required />
-      <textarea placeholder="Why do you want Alpcoin?" id="reason"></textarea>
-      <button type="submit" id="submitBtn">Submit</button>
-    </form>
+  <div class="logo">
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
   </div>
 
-  <script>
-    const translations = {
-      en: {
-        welcome: "Welcome to Alpcoin",
-        comingSoon: "Stay tuned, Alpcoin is coming!",
-        followUs: "Follow us on",
-        formTitle: "Join Airdrop",
-        submit: "Submit",
-        name: "Your Name",
-        wallet: "Your TON Wallet",
-        reason: "Why do you want Alpcoin?"
-      },
-      uz: {
-        welcome: "Alpcoin saytiga xush kelibsiz",
-        comingSoon: "Bizni kuzatib boring, Alpcoin tez orada ishga tushadi!",
-        followUs: "Bizni ijtimoiy tarmoqlarda kuzating",
-        formTitle: "Airdropga qo'shiling",
-        submit: "Yuborish",
-        name: "Ismingiz",
-        wallet: "Sizning TON hamyoningiz",
-        reason: "Nima uchun Alpcoin sizga kerak?"
-      },
-      ru: {
-        welcome: "Добро пожаловать в Alpcoin",
-        comingSoon: "Следите за нами, Alpcoin скоро запустится!",
-        followUs: "Подписывайтесь на нас в соцсетях",
-        formTitle: "Присоединиться к Airdrop",
-        submit: "Отправить",
-        name: "Ваше имя",
-        wallet: "Ваш TON кошелек",
-        reason: "Почему вы хотите получить Alpcoin?"
-      }
-    };
+  <h1>Alpcoin – Tez Orada Ishga Tushadi</h1>
+  <p>Yangiliklarni kuzatib boring. Biz bilan qoling.</p>
 
-    const langSelect = document.getElementById("langSelect");
-    const welcomeText = document.getElementById("welcomeText");
-    const comingText = document.getElementById("comingText");
-    const followText = document.getElementById("followText");
-    const formTitle = document.getElementById("formTitle");
-    const submitBtn = document.getElementById("submitBtn");
-    const nameInput = document.getElementById("name");
-    const walletInput = document.getElementById("wallet");
-    const reasonInput = document.getElementById("reason");
+  <div class="wallet-box">
+    <input type="text" placeholder="Sizning TON wallet manzilingiz"/>
+    <br/>
+    <button>Alpcoin olish</button>
+  </div>
 
-    langSelect.addEventListener("change", () => {
-      const lang = langSelect.value;
-      const t = translations[lang];
-      welcomeText.textContent = t.welcome;
-      comingText.textContent = t.comingSoon;
-      followText.textContent = t.followUs;
-      formTitle.textContent = t.formTitle;
-      submitBtn.textContent = t.submit;
-      nameInput.placeholder = t.name;
-      walletInput.placeholder = t.wallet;
-      reasonInput.placeholder = t.reason;
-    });
+  <div class="socials">
+    <a href="https://instagram.com/alpcoinofficial" target="_blank">Instagram</a> |
+    <a href="https://youtube.com/@alpcoinofficial" target="_blank">YouTube</a> |
+    <a href="https://twitter.com/AlpcoinGlobal" target="_blank">Twitter</a>
+  </div>
 
-    document.getElementById("airdropForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      alert("✅ Thank you for joining the Alpcoin airdrop!");
-      this.reset();
-    });
-  </script>
+  <div class="footer">
+    &copy; 2025 Alpcoin. Barcha huquqlar himoyalangan.
+  </div>
 </body>
 </html>
