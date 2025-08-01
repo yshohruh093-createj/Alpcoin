@@ -2,117 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin - Official Site</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpcoin - Coming Soon</title>
+  <meta name="description" content="Alpcoin - Humanity-Focused Digital Currency">
+  <meta property="og:title" content="Alpcoin - Coming Soon" />
+  <meta property="og:description" content="Alpcoin - Humanity-Focused Digital Currency" />
+  <meta property="og:image" content="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" />
+  <meta property="og:url" content="https://yshohruh093-createj.github.io/Alpcoin" />
+  <link rel="icon" href="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" />
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Rubik', sans-serif;
-    }
-
-    body {
-      background-image: url('https://images.unsplash.com/photo-1508264165352-258db2ebd59b?auto=format&fit=crop&w=1920&q=80');
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      min-height: 100vh;
-      color: white;
+      color: #fff;
       text-align: center;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      margin: auto;
       padding: 20px;
-    }
-
-    .logo {
-      width: 150px;
-      height: 150px;
+      background-color: rgba(0, 0, 0, 0.6);
       border-radius: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+      max-width: 600px;
     }
-
-    .headline {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      animation: fadeIn 2s ease-in-out infinite alternate;
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #fff;
     }
-
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
     .socials {
-      margin-top: 30px;
-      display: flex;
-      gap: 25px;
+      margin-top: 20px;
     }
-
-    .socials a img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.3s ease;
+    .socials a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
+      transition: 0.3s;
     }
-
-    .socials a img:hover {
-      transform: scale(1.2);
+    .socials a:hover {
+      color: #00aced;
     }
-
-    .lang-select {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: rgba(0,0,0,0.4);
-      color: white;
-      border: none;
+    .language-select {
+      margin-top: 20px;
+    }
+    select {
       padding: 8px 12px;
-      font-size: 1rem;
-      border-radius: 8px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0.6; }
-      to { opacity: 1; }
-    }
-
     @media (max-width: 600px) {
-      .headline { font-size: 1.5rem; }
-      .logo { width: 100px; height: 100px; }
+      .logo {
+        width: 80px;
+        height: 80px;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
     }
   </style>
 </head>
 <body>
-  <select class="lang-select" onchange="changeLang(this.value)">
-    <option value="en">English</option>
-    <option value="uz">Oʻzbek</option>
-    <option value="ru">Русский</option>
-  </select>
+  <div class="container">
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo" />
+    <h1>Please wait... Alpcoin is coming</h1>
+    
+    <div class="language-select">
+      <label for="language">🌐 Language: </label>
+      <select id="language" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="uz">O‘zbek</option>
+        <option value="ru">Русский</option>
+        <option value="tr">Türkçe</option>
+      </select>
+    </div>
 
-  <img class="logo" src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
-
-  <h1 class="headline" id="headline">Please wait... Alpcoin is coming</h1>
-
-  <div class="socials">
-    <a href="https://www.instagram.com/alpcoinofficial" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
-    </a>
-    <a href="https://youtube.com/@alpcoinofficial" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-    </a>
-    <a href="https://twitter.com/AlpcoinGlobal" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
-    </a>
+    <div class="socials">
+      <a href="https://instagram.com/alpcoinofficial" target="_blank">📷</a>
+      <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶️</a>
+      <a href="https://twitter.com/AlpcoinGlobal" target="_blank">🐦</a>
+    </div>
   </div>
 
   <script>
-    const headlines = {
-      en: "Please wait... Alpcoin is coming",
-      uz: "Iltimos kuting... Alpcoin tez orada",
-      ru: "Пожалуйста, подождите... Alpcoin скоро будет"
-    };
-
-    function changeLang(lang) {
-      document.getElementById('headline').innerText = headlines[lang];
+    function changeLanguage(lang) {
+      const msg = {
+        en: "Please wait... Alpcoin is coming",
+        uz: "Iltimos kuting... Alpcoin tez orada",
+        ru: "Пожалуйста, подождите... Alpcoin скоро будет",
+        tr: "Lütfen bekleyin... Alpcoin yakında geliyor"
+      };
+      document.querySelector("h1").textContent = msg[lang];
     }
   </script>
 </body>
