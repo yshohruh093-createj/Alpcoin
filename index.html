@@ -3,97 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin - Official Site</title>
-  <link rel="icon" type="image/png" href="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg">
+  <title>Alpcoin | Tez orada...</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://i.postimg.cc/SsWqXDFW/mountain-bg.jpg') no-repeat center center fixed;
+      font-family: 'Montserrat', sans-serif;
+      background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') no-repeat center center fixed;
       background-size: cover;
       color: white;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
     }
-
-    .container {
-      padding: 60px 20px;
-    }
-
     .logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid white;
-      margin-bottom: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 20px;
+      border-radius: 20px;
     }
-
     h1 {
-      font-size: 36px;
+      font-size: 32px;
       margin: 10px 0;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
     }
-
-    p {
-      font-size: 20px;
-      margin: 10px 0 30px;
+    .socials {
+      margin-top: 30px;
     }
-
     .socials a {
-      margin: 0 15px;
-      font-size: 24px;
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s ease;
+      margin: 0 10px;
+      display: inline-block;
     }
-
-    .socials a:hover {
-      color: #ffd700;
-    }
-
-    .lang {
-      margin-top: 40px;
-    }
-
-    .lang select {
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 6px;
-      border: none;
-    }
-
-    footer {
-      margin-top: 50px;
-      font-size: 14px;
-      opacity: 0.8;
+    .socials img {
+      width: 40px;
+      height: 40px;
+      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo" />
-    <h1>Alpcoin - Global Token</h1>
-    <p>Biz hozircha qurilishdamiz. Tez orada ishga tushamiz.</p>
-    <p>Rasmiy tarmoqlar orqali bizni kuzatib boring:</p>
-    
-    <div class="socials">
-      <a href="https://instagram.com/alpcoinofficial" target="_blank">📷 Instagram</a>
-      <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶ YouTube</a>
-      <a href="https://twitter.com/AlpcoinGlobal" target="_blank">🐦 Twitter</a>
-    </div>
+  <img class="logo" src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
+  <h1>Alpcoin tez orada ishga tushadi</h1>
+  <p>Yangiliklarni kuzatib boring. Biz bilan qoling!</p>
 
-    <div class="lang">
-      <label for="language">🌐 Tilni tanlang:</label>
-      <select id="language" onchange="alert('Til funksiyasi hali ishga tushmagan.')">
-        <option value="uz">O'zbek</option>
-        <option value="en">English</option>
-        <option value="ru">Русский</option>
-        <option value="tr">Türkçe</option>
-      </select>
-    </div>
-
-    <footer>
-      &copy; 2025 Alpcoin. Barcha huquqlar himoyalangan.
-    </footer>
+  <div class="socials">
+    <a href="https://instagram.com/alpcoinofficial" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" /></a>
+    <a href="https://youtube.com/@alpcoinofficial" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
+    <a href="https://twitter.com/AlpcoinGlobal" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" /></a>
   </div>
 </body>
 </html>
