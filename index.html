@@ -3,85 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin</title>
-  <link rel="icon" href="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" />
+  <title>Alpcoin - Official Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('https://i.postimg.cc/vHTScNPb/mountain-bg.jpg') no-repeat center center fixed;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Rubik', sans-serif;
+    }
+
+    body {
+      background-image: url('https://images.unsplash.com/photo-1508264165352-258db2ebd59b?auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
+      background-position: center;
+      min-height: 100vh;
       color: white;
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
       padding: 20px;
     }
+
     .logo {
-      width: 100px;
-      border-radius: 12px;
-      margin-bottom: 20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
     }
+
+    .headline {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      animation: fadeIn 2s ease-in-out infinite alternate;
+    }
+
     .socials {
-      margin-top: 20px;
+      margin-top: 30px;
+      display: flex;
+      gap: 25px;
     }
-    .socials a {
-      margin: 0 10px;
-      color: white;
-      font-size: 28px;
-      text-decoration: none;
+
+    .socials a img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
     }
+
+    .socials a img:hover {
+      transform: scale(1.2);
+    }
+
     .lang-select {
       position: absolute;
-      top: 10px;
-      right: 10px;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 6px 12px;
+      top: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.4);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      font-size: 1rem;
       border-radius: 8px;
     }
-    .lang-select button {
-      background: transparent;
-      border: none;
-      color: white;
-      margin: 0 5px;
-      cursor: pointer;
-      font-size: 18px;
+
+    @keyframes fadeIn {
+      from { opacity: 0.6; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .headline { font-size: 1.5rem; }
+      .logo { width: 100px; height: 100px; }
     }
   </style>
 </head>
 <body>
-  <div class="lang-select">
-    <button onclick="setLang('uz')">🇺🇿</button>
-    <button onclick="setLang('ru')">🇷🇺</button>
-    <button onclick="setLang('en')">🇬🇧</button>
-  </div>
+  <select class="lang-select" onchange="changeLang(this.value)">
+    <option value="en">English</option>
+    <option value="uz">Oʻzbek</option>
+    <option value="ru">Русский</option>
+  </select>
 
-  <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo"/>
-  <h1 id="title">Alpcoin bu yerda boshlanadi</h1>
+  <img class="logo" src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
+
+  <h1 class="headline" id="headline">Please wait... Alpcoin is coming</h1>
 
   <div class="socials">
-    <a href="https://www.instagram.com/alpcoinofficial" target="_blank">📷</a>
-    <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶️</a>
-    <a href="https://twitter.com/AlpcoinGlobal" target="_blank">🐦</a>
+    <a href="https://www.instagram.com/alpcoinofficial" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+    </a>
+    <a href="https://youtube.com/@alpcoinofficial" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+    </a>
+    <a href="https://twitter.com/AlpcoinGlobal" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+    </a>
   </div>
 
   <script>
-    const translations = {
-      uz: {
-        title: "Alpcoin bu yerda boshlanadi"
-      },
-      ru: {
-        title: "Alpcoin начинается здесь"
-      },
-      en: {
-        title: "Alpcoin begins here"
-      }
+    const headlines = {
+      en: "Please wait... Alpcoin is coming",
+      uz: "Iltimos kuting... Alpcoin tez orada",
+      ru: "Пожалуйста, подождите... Alpcoin скоро будет"
     };
 
-    function setLang(lang) {
-      document.getElementById("title").innerText = translations[lang].title;
+    function changeLang(lang) {
+      document.getElementById('headline').innerText = headlines[lang];
     }
   </script>
 </body>
