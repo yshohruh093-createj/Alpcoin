@@ -4,36 +4,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alpcoin</title>
-
-  <!-- Background image style -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
   <style>
     body {
-      background-image: url("A_digital_photograph_with_overlay_text_and_UI_elem.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      backdrop-filter: brightness(0.85);
-      color: white;
-      font-family: sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: url('https://i.postimg.cc/8cNLSdY4/mountains-sea-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 48px;
+      margin: 10px 0;
+    }
+    h2 {
+      font-size: 28px;
+      margin: 10px 0 30px;
+      color: #00ffcc;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .buttons a, .buttons button, .buttons select {
+      background-color: #00b894;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .buttons a:hover, .buttons button:hover {
+      background-color: #019875;
+    }
+    .social-icons {
+      margin-top: 30px;
+    }
+    .social-icons a {
+      font-size: 24px;
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #cccccc;
     }
   </style>
 </head>
-
 <body>
-  <header style="text-align: center; padding: 2rem;">
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" style="width: 120px; height: auto;" />
+  <div class="overlay">
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo">
     <h1>Alpcoin</h1>
     <h2>$ALP</h2>
-    <p><a href="https://t.me/alpcoinoficcal" style="color: #00ffff;">Join Telegram</a> | <button>Connect Wallet</button> | 🌐 Language</p>
-  </header>
 
-  <footer style="position: fixed; bottom: 0; width: 100%; text-align: center; padding: 1rem 0; background: rgba(0, 0, 0, 0.5);">
-    <a href="https://www.instagram.com/alpcoinofficial" style="margin: 0 1rem;">📷</a>
-    <a href="https://youtube.com/@alpcoinofficial" style="margin: 0 1rem;">▶️</a>
-    <a href="https://x.com/AlpcoinGlobal" style="margin: 0 1rem;">🐦</a>
-    <p style="margin-top: 0.5rem;">© 2025 Alpcoin. All rights reserved.</p>
-  </footer>
+    <div class="buttons">
+      <a href="https://t.me/alpcoinoficcal" target="_blank">Join Telegram</a>
+      <button onclick="alert('Wallet connection coming soon!')">Connect Wallet</button>
+      <select onchange="alert('Language switch coming soon!')">
+        <option>🌐 Language</option>
+        <option>English</option>
+        <option>O'zbek</option>
+        <option>Русский</option>
+      </select>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/alpcoinofficial" target="_blank">📷</a>
+      <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶️</a>
+      <a href="https://x.com/AlpcoinGlobal" target="_blank">🐦</a>
+    </div>
+
+    <footer>
+      © 2025 Alpcoin. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
