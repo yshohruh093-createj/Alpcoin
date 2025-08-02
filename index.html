@@ -3,95 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin</title>
+  <title>Alpcoin - Official</title>
+  <link rel="icon" href="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" type="image/jpg">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('banner.jpg') no-repeat center center fixed;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://i.postimg.cc/RZSN0MPJ/id53b3.jpg');
       background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       color: white;
-      text-align: center;
+      min-height: 100vh;
     }
 
     .overlay {
-      background-color: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.6);
       min-height: 100vh;
-      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
     }
 
     .logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
     }
 
-    .title {
-      font-size: 3em;
-      font-weight: bold;
-      margin-bottom: 10px;
+    .logo img {
+      height: 50px;
+      border-radius: 10px;
+      margin-right: 10px;
     }
 
-    .subtitle {
-      font-size: 2em;
-      margin-bottom: 30px;
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
 
-    .links a {
-      margin: 10px;
+    .actions select, .actions button {
+      padding: 0.4rem 0.8rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .main {
+      text-align: center;
+      margin-top: 5rem;
+    }
+
+    .main h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .main p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+
+    .social {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .social a {
       color: white;
-      text-decoration: none;
-      font-size: 1.2em;
-    }
-
-    .social-icons a {
       margin: 0 10px;
-      font-size: 1.5em;
+      text-decoration: none;
     }
 
     footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #ccc;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
     }
 
-    .top-right {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-    }
-
-    .top-right button, .top-right select {
-      margin-left: 10px;
-      padding: 6px 12px;
-      border-radius: 5px;
-      border: none;
-      font-size: 0.9em;
+    @media (max-width: 768px) {
+      .main h1 { font-size: 2rem; }
+      .main p { font-size: 1rem; }
+      .logo img { height: 40px; }
     }
   </style>
 </head>
 <body>
   <div class="overlay">
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo" />
-    <div class="title">Alpcoin</div>
-    <div class="subtitle">$ALP</div>
+    <header>
+      <div class="logo">
+        <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo">
+        <h2>Alpcoin</h2>
+      </div>
+      <div class="actions">
+        <select>
+          <option>EN</option>
+          <option>UZ</option>
+        </select>
+        <button onclick="alert('Coming soon')">Connect Wallet</button>
+      </div>
+    </header>
 
-    <div class="top-right">
-      <a href="https://t.me/alpcoinoficcal" target="_blank"><button>Join Telegram</button></a>
-      <button>Connect Wallet</button>
-      <select>
-        <option>EN</option>
-        <option>UZ</option>
-      </select>
+    <div class="main">
+      <h1>Welcome to Alpcoin</h1>
+      <p>The decentralized humanitarian token empowering global impact and financial inclusion.</p>
+
+      <div class="social">
+        <a href="https://www.instagram.com/alpcoinofficial" target="_blank">Instagram</a> |
+        <a href="https://youtube.com/@alpcoinofficial" target="_blank">YouTube</a> |
+        <a href="https://x.com/AlpcoinGlobal" target="_blank">Twitter</a> |
+        <a href="https://t.me/alpcoinoficcal" target="_blank">Telegram</a>
+      </div>
     </div>
 
-    <div class="links social-icons">
-      <a href="https://www.instagram.com/alpcoinofficial" target="_blank">📷</a>
-      <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶️</a>
-      <a href="https://x.com/AlpcoinGlobal" target="_blank">🐦</a>
-    </div>
-
-    <footer>© 2025 Alpcoin. All rights reserved.</footer>
+    <footer>
+      <p>&copy; 2025 Alpcoin. All rights reserved.</p>
+    </footer>
   </div>
 </body>
 </html>
