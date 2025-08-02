@@ -1,86 +1,78 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alpcoin</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpcoin | Official Website</title>
+  <link rel="icon" href="logo.png" />
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb'); /* Tog'li orqa fon */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://i.postimg.cc/RZSN0MPJ/id53b3.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
       color: white;
       text-align: center;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
-      backdrop-filter: brightness(0.7);
+      align-items: center;
+      padding: 20px;
     }
-    .logo {
+    img.logo {
       width: 150px;
       height: 150px;
       border-radius: 50%;
       margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.7);
     }
     h1 {
-      font-size: 60px;
-      margin: 10px 0 0 0;
-      text-shadow: 2px 2px 4px #000;
+      font-size: 48px;
+      margin: 10px 0;
     }
-    h2 {
-      font-size: 32px;
-      margin: 0;
-      text-shadow: 2px 2px 4px #000;
-    }
-    .social-icons {
-      margin-top: 20px;
+    p {
+      font-size: 18px;
+      margin: 5px 0 30px;
     }
     .social-icons a {
       margin: 0 10px;
+      color: white;
+      font-size: 24px;
       text-decoration: none;
+    }
+    .wallet-btn {
+      background-color: #4CAF50;
       color: white;
-      font-size: 30px;
-      transition: transform 0.2s;
-    }
-    .social-icons a:hover {
-      transform: scale(1.2);
-    }
-    .join-button {
-      margin-top: 30px;
-    }
-    .join-button a {
-      background-color: #0055ff;
-      color: white;
-      padding: 15px 30px;
+      border: none;
+      padding: 12px 30px;
       font-size: 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      border-radius: 5px;
+      cursor: pointer;
     }
-    .footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 12px;
-      color: #ccc;
+    .wallet-btn:hover {
+      background-color: #45a049;
     }
   </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    function connectWallet() {
+      alert('Connect Wallet feature coming soon...');
+    }
+  </script>
 </head>
 <body>
-  <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo">
-  <h1>Alpcoin</h1>
-  <h2>$ALP</h2>  <div class="social-icons">
-    <a href="https://instagram.com/alpcoinofficial" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://youtube.com/@alpcoinofficial" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://twitter.com/AlpcoinGlobal" target="_blank"><i class="fab fa-twitter"></i></a>
-  </div>  <div class="join-button">
-    <a href="https://t.me/alpcoinofficial" target="_blank">🚀 Join Alpcoin</a>
-  </div>  <div class="footer">
-    &copy; 2025 Alpcoin. All rights reserved.
+  <div class="overlay">
+    <img src="logo.png" alt="Alpcoin Logo" class="logo">
+    <h1>Alpcoin ($ALP)</h1>
+    <p>Official Alpcoin Token Website</p>
+    <button class="wallet-btn" onclick="connectWallet()">Connect Wallet</button>
+    <div class="social-icons" style="margin-top: 30px;">
+      <a href="https://t.me/alpcoinoficcal" target="_blank">Telegram</a>
+      <a href="https://www.instagram.com/alpcoinofficial" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@alpcoinofficial?si=Tesi_G78kQVG9qYw" target="_blank">YouTube</a>
+      <a href="https://twitter.com/AlpcoinGlobal" target="_blank">Twitter</a>
+    </div>
   </div>
 </body>
 </html>
