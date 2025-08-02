@@ -2,105 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alpcoin</title>
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: url('https://i.postimg.cc/RZSN0MPJ/id53b3.jpg') no-repeat center center/cover;
+      font-family: Arial, sans-serif;
+      background: url('https://i.postimg.cc/RZSN0MPJ/id53b3.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
       text-align: center;
     }
+    .container {
+      padding: 60px 20px;
+    }
     .logo {
-      width: 120px;
-      margin-top: 20px;
+      max-width: 150px;
+      margin-bottom: 20px;
     }
-    h1 {
-      font-size: 2.5em;
-      margin: 10px 0;
+    .title {
+      font-size: 3em;
+      font-weight: bold;
     }
-    h2 {
+    .subtitle {
+      font-size: 1.8em;
+      margin-bottom: 40px;
+    }
+    .social-icons a {
+      margin: 0 10px;
       font-size: 1.5em;
-      color: #ccc;
-    }
-    .buttons, .social {
-      margin: 20px 0;
-    }
-    .buttons a, .social a, select {
-      margin: 10px;
-      padding: 12px 20px;
-      font-size: 1em;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
       text-decoration: none;
-      background: rgba(255,255,255,0.1);
       color: white;
-      transition: 0.3s;
     }
-    .buttons a:hover, .social a:hover, select:hover {
-      background: rgba(255,255,255,0.3);
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      border: 2px solid white;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: all 0.3s;
     }
-    footer {
-      margin-top: 40px;
+    .buttons a:hover {
+      background-color: white;
+      color: black;
+    }
+    .footer {
+      margin-top: 50px;
       font-size: 0.9em;
-      color: #aaa;
+    }
+    select.language-switcher {
+      margin-top: 10px;
+      padding: 8px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1em;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo" />
+    
+    <div class="title">Alpcoin</div>
+    <div class="subtitle">$ALP</div>
 
-  <img class="logo" src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
-  <h1>Alpcoin</h1>
-  <h2>$ALP</h2>
+    <div class="buttons">
+      <a href="https://t.me/alpcoinoficcal" target="_blank">Join Telegram</a>
+      <a href="#">Connect Wallet</a>
+    </div>
 
-  <div class="buttons">
-    <a id="joinTelegram" href="https://t.me/alpcoinoficcal" target="_blank">Join Telegram</a>
-    <a id="connectWallet" href="#">Connect Wallet</a>
-    <select id="languageSelector">
-      <option value="en">English</option>
-      <option value="uz">O‘zbek</option>
-      <option value="ru">Русский</option>
+    <select class="language-switcher" onchange="changeLanguage(this.value)">
+      <option value="en">🌐 English</option>
+      <option value="uz">🇺🇿 Oʻzbek</option>
+      <option value="ru">🇷🇺 Русский</option>
     </select>
-  </div>
 
-  <div class="social">
-    <a href="https://www.instagram.com/alpcoinofficial" target="_blank">📷</a>
-    <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶️</a>
-    <a href="https://x.com/AlpcoinGlobal" target="_blank">🐦</a>
-  </div>
+    <div class="social-icons" style="margin-top: 30px;">
+      <a href="https://www.instagram.com/alpcoinofficial" target="_blank">📷</a>
+      <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶️</a>
+      <a href="https://x.com/AlpcoinGlobal" target="_blank">🐦</a>
+    </div>
 
-  <footer>
-    © 2025 Alpcoin. All rights reserved.
-  </footer>
+    <div class="footer">© 2025 Alpcoin. All rights reserved.</div>
+  </div>
 
   <script>
-    const translations = {
-      en: {
-        joinTelegram: "Join Telegram",
-        connectWallet: "Connect Wallet"
-      },
-      uz: {
-        joinTelegram: "Telegramga qoʻshiling",
-        connectWallet: "Hamyonni ulash"
-      },
-      ru: {
-        joinTelegram: "Присоединиться к Telegram",
-        connectWallet: "Подключить кошелёк"
-      }
-    };
-
-    const languageSelector = document.getElementById("languageSelector");
-    const joinTelegramBtn = document.getElementById("joinTelegram");
-    const connectWalletBtn = document.getElementById("connectWallet");
-
-    languageSelector.addEventListener("change", () => {
-      const lang = languageSelector.value;
-      joinTelegramBtn.textContent = translations[lang].joinTelegram;
-      connectWalletBtn.textContent = translations[lang].connectWallet;
-    });
+    function changeLanguage(lang) {
+      alert("Til o‘zgartirish hozircha faqat dizayn uchun qo‘shilgan. Keyinchalik to‘liq tarjima qilinadi: " + lang);
+      // Future: Here you can load different language content dynamically
+    }
   </script>
-
 </body>
 </html>
