@@ -2,104 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alpcoin | Official</title>
-  <link rel="icon" href="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" type="image/png" />
+  <link rel="icon" href="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" type="image/png">
   <style>
     body {
       margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      background-image: url('https://yshohruh093-createj.github.io/Alpcoin/assets/background.jpg');
+      background-image: url('https://i.postimg.cc/nc5LYT19/sea-mountain-bg.jpg');
       background-size: cover;
       background-position: center;
-      color: white;
-      text-align: center;
       height: 100vh;
-      overflow: hidden;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.4);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(0, 0, 0, 0.6);
     }
 
-    header img {
+    .logo {
       height: 60px;
     }
 
-    .lang-wallet {
+    .controls {
       display: flex;
-      gap: 10px;
+      gap: 15px;
     }
 
-    button {
-      padding: 10px 20px;
+    .controls button {
+      padding: 10px 16px;
       border: none;
       border-radius: 8px;
-      background-color: #00aaff;
+      background-color: #007bff;
       color: white;
-      cursor: pointer;
       font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .controls button:hover {
+      background-color: #0056b3;
     }
 
     .hero {
-      margin-top: 100px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
     }
 
     .hero h1 {
-      font-size: 50px;
-      text-shadow: 2px 2px 8px #000;
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-shadow: 3px 3px 10px #000;
     }
 
     .hero p {
-      font-size: 24px;
-      margin-top: 10px;
-      text-shadow: 1px 1px 5px #000;
+      font-size: 22px;
+      text-shadow: 2px 2px 8px #000;
     }
 
     footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 10px 0;
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
       font-size: 14px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .hero h1 {
         font-size: 32px;
       }
-
       .hero p {
         font-size: 18px;
       }
-
-      header img {
-        height: 40px;
+      .logo {
+        height: 45px;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
-    <div class="lang-wallet">
-      <button onclick="alert('Language options soon')">🌐 Language</button>
-      <button onclick="alert('Wallet connect coming soon')">🔗 Connect Wallet</button>
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo">
+    <div class="controls">
+      <button onclick="alert('Til tanlash funksiyasi tez orada qo‘shiladi')">🌐 Language</button>
+      <button onclick="alert('Wallet ulanish funksiyasi tez orada')">🔗 Connect Wallet</button>
     </div>
   </header>
 
   <div class="hero">
     <h1>Welcome to Alpcoin</h1>
-    <p>A cryptocurrency with purpose and community</p>
+    <p>A community-driven cryptocurrency with purpose</p>
   </div>
 
   <footer>
-    © 2025 Alpcoin. All rights reserved.
+    &copy; 2025 Alpcoin. All rights reserved.
   </footer>
+
 </body>
 </html>
