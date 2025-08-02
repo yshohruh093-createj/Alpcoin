@@ -2,122 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alpcoin</title>
-  <link rel="icon" href="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://i.ibb.co/jv8HywD/mountain-sea-bg.jpg') no-repeat center center fixed;
+      font-family: 'Montserrat', sans-serif;
+      background: url('https://yshohruh093-createj.github.io/Alpcoin/banner.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
-
-    header {
+    .overlay {
       background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      min-height: 100vh;
+      padding: 40px 20px;
+      text-align: center;
     }
-
-    header img {
-      height: 50px;
-      margin-left: 10px;
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
     }
-
+    h1 {
+      font-size: 48px;
+      margin: 10px 0;
+    }
+    h2 {
+      font-size: 28px;
+      margin: 10px 0 30px;
+      color: #00ffcc;
+    }
     .buttons {
       display: flex;
-      gap: 10px;
-      margin-right: 10px;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
     }
-
-    .buttons button {
-      padding: 10px 20px;
-      background-color: #00aaff;
-      border: none;
-      border-radius: 8px;
+    .buttons a, .buttons button, .buttons select {
+      background-color: #00b894;
       color: white;
-      font-weight: bold;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
       font-size: 16px;
       cursor: pointer;
+      transition: background 0.3s;
     }
-
-    main {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 20px;
+    .buttons a:hover, .buttons button:hover {
+      background-color: #019875;
     }
-
-    main h1 {
-      font-size: 36px;
-      text-shadow: 2px 2px 8px black;
+    .social-icons {
+      margin-top: 30px;
     }
-
-    main p {
-      font-size: 18px;
-      margin-top: 10px;
-      text-shadow: 1px 1px 6px black;
+    .social-icons a {
+      font-size: 24px;
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
     }
-
     footer {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px;
+      margin-top: 40px;
       font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-      main h1 {
-        font-size: 28px;
-      }
-
-      .buttons {
-        flex-direction: column;
-        align-items: flex-end;
-        margin-top: 10px;
-      }
-
-      .buttons button {
-        width: 100%;
-      }
-
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      header img {
-        margin-bottom: 10px;
-      }
+      color: #cccccc;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
+  <div class="overlay">
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo">
+    <h1>Alpcoin</h1>
+    <h2>$ALP</h2>
+
     <div class="buttons">
-      <button>🌐 Language</button>
-      <button>🔗 Connect Wallet</button>
+      <a href="https://t.me/alpcoinoficcal" target="_blank">Join Telegram</a>
+      <button onclick="alert('Wallet connection coming soon!')">Connect Wallet</button>
+      <select onchange="alert('Language switch coming soon!')">
+        <option>🌐 Language</option>
+        <option>English</option>
+        <option>O'zbek</option>
+        <option>Русский</option>
+      </select>
     </div>
-  </header>
 
-  <main>
-    <h1>Welcome to Alpcoin</h1>
-    <p>A cryptocurrency with purpose and community</p>
-  </main>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/alpcoinofficial" target="_blank">📷</a>
+      <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶️</a>
+      <a href="https://x.com/AlpcoinGlobal" target="_blank">🐦</a>
+    </div>
 
-  <footer>
-    © 2025 Alpcoin. All rights reserved.
-  </footer>
+    <!-- About Alpcoin -->
+    <section style="margin-top: 50px;">
+      <h2 style="color: #00ffcc; font-size: 32px;">About Alpcoin</h2>
+      <p style="max-width: 700px; margin: 0 auto; font-size: 18px; color: #e0e0e0;">
+        Alpcoin ($ALP) is a community-driven token focused on empowering humanitarian projects, education, and digital finance. Born from a vision of inclusivity and transparency, Alpcoin aims to build bridges between crypto innovation and real-world impact.
+      </p>
+    </section>
+
+    <!-- Tokenomics -->
+    <section style="margin-top: 50px;">
+      <h2 style="color: #00ffcc; font-size: 32px;">Tokenomics</h2>
+      <ul style="list-style-type: none; padding: 0; max-width: 700px; margin: 0 auto; font-size: 18px; color: #e0e0e0;">
+        <li>🔹 Total Supply: 100,000,000 ALP</li>
+        <li>🔹 40% - Community Airdrop</li>
+        <li>🔹 25% - Ecosystem & Development</li>
+        <li>🔹 15% - Founders & Team</li>
+        <li>🔹 10% - Strategic Partnerships</li>
+        <li>🔹 10% - Liquidity & Exchanges</li>
+      </ul>
+    </section>
+
+    <footer>
+      © 2025 Alpcoin. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
