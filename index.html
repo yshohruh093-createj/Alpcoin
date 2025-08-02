@@ -1,78 +1,87 @@
-<!DOCTYPE html><html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alpcoin | Official Website</title>
-  <link rel="icon" href="logo.png" />
+  <title>Alpcoin | ALP Token</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" />
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://i.postimg.cc/RZSN0MPJ/id53b3.jpg') no-repeat center center fixed;
+      font-family: 'Montserrat', sans-serif;
+      background: url('https://i.postimg.cc/jSjr4g1F/mountain-sea-bg.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
       text-align: center;
-    }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    img.logo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 48px;
-      margin: 10px 0;
-    }
-    p {
-      font-size: 18px;
-      margin: 5px 0 30px;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      color: white;
-      font-size: 24px;
-      text-decoration: none;
-    }
-    .wallet-btn {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 12px 30px;
-      font-size: 18px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .wallet-btn:hover {
-      background-color: #45a049;
-    }
+    }header {
+  padding: 40px 20px 20px;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 20px 0 10px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #ffd700;
+  margin-bottom: 30px;
+}
+
+.socials {
+  margin: 20px 0;
+}
+
+.socials a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+}
+
+.button {
+  background-color: #00bfff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #009acd;
+}
+
   </style>
-  <script>
-    function connectWallet() {
-      alert('Connect Wallet feature coming soon...');
-    }
-  </script>
-</head>
-<body>
-  <div class="overlay">
-    <img src="logo.png" alt="Alpcoin Logo" class="logo">
-    <h1>Alpcoin ($ALP)</h1>
-    <p>Official Alpcoin Token Website</p>
-    <button class="wallet-btn" onclick="connectWallet()">Connect Wallet</button>
-    <div class="social-icons" style="margin-top: 30px;">
-      <a href="https://t.me/alpcoinoficcal" target="_blank">Telegram</a>
-      <a href="https://www.instagram.com/alpcoinofficial" target="_blank">Instagram</a>
-      <a href="https://youtube.com/@alpcoinofficial?si=Tesi_G78kQVG9qYw" target="_blank">YouTube</a>
-      <a href="https://twitter.com/AlpcoinGlobal" target="_blank">Twitter</a>
-    </div>
-  </div>
-</body>
-</html>
+</head><body>
+  <header>
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo" />
+    <h1>Alpcoin</h1>
+    <h2>$ALP Token</h2><div class="socials">
+  <a href="https://t.me/alpcoinoficcal" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/telegram.png" alt="Telegram" width="40" />
+  </a>
+  <a href="https://instagram.com/alpcoinofficial" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram" width="40" />
+  </a>
+  <a href="https://youtube.com/@alpcoinofficial" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube" width="40" />
+  </a>
+  <a href="https://x.com/AlpcoinGlobal" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx.png" alt="Twitter X" width="40" />
+  </a>
+</div>
+
+<button class="button" onclick="alert('Connect Wallet feature coming soon.')">Connect Wallet</button>
+
+  </header>
+</body></html>
