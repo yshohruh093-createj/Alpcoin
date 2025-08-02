@@ -1,118 +1,83 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alpcoin - Official Site</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alpcoin - The Token of Hope</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
     body {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://i.postimg.cc/cJ9Fnd7h/mountain-sea.jpg') no-repeat center center/cover;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://i.postimg.cc/gcNpp8wF/mountain-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
       text-align: center;
+      display: flex;
+      flex-direction: column;
       min-height: 100vh;
+      justify-content: space-between;
+    }
+
+    header {
       padding: 20px;
     }
+
     header img {
       width: 100px;
-      margin-bottom: 10px;
+      border-radius: 50%;
+      border: 2px solid white;
     }
+
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      font-size: 3em;
+      margin: 0.3em 0 0.1em;
     }
-    .description {
-      font-size: 1.2rem;
+
+    p {
+      font-size: 1.2em;
+      margin: 0 1em;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
       margin-bottom: 30px;
     }
-    .socials img {
-      width: 35px;
-      margin: 0 10px;
-    }
-    .lang-select, .wallet-input {
-      margin: 20px auto;
-      max-width: 300px;
-    }
-    .wallet-input input, .lang-select select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border: none;
-      border-radius: 5px;
-    }
-    button {
-      margin-top: 20px;
-      padding: 10px 30px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      background: #00c4ff;
+
+    .socials a {
       color: white;
-      cursor: pointer;
+      text-decoration: none;
+      font-size: 1.5em;
+      transition: color 0.3s;
     }
-    section {
-      margin: 40px 0;
+
+    .socials a:hover {
+      color: #00ffff;
     }
-    footer {
-      margin-top: 60px;
-      font-size: 0.8rem;
-      opacity: 0.7;
+
+    @media screen and (max-width: 600px) {
+      h1 { font-size: 2em; }
+      p { font-size: 1em; }
+      .socials a { font-size: 1.2em; }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo">
-    <h1>Welcome to Alpcoin</h1>
-    <p class="description">The humanitarian token for a better tomorrow</p>
-  </header>  <div class="lang-select">
-    <label for="lang">🌐 Choose your language:</label>
-    <select id="lang">
-      <option value="en">English</option>
-      <option value="uz">O‘zbek</option>
-      <option value="ru">Русский</option>
-    </select>
-  </div>  <div class="wallet-input">
-    <label for="username">Enter Your Name:</label>
-    <input type="text" id="username" placeholder="e.g. AlpUser123">
-  </div><button>Connect Wallet</button>
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
+  </header>
 
-  <section>
-    <h2>🌱 Alpcoin Airdrop</h2>
-    <p>Get your free Alpcoins by joining our community and sharing.</p>
-    <button>Join Airdrop</button>
-  </section>  <section>
-    <h2>📊 Tokenomics</h2>
-    <p>Total Supply: 100,000,000 ALP</p>
-    <p>50% - Airdrop</p>
-    <p>20% - Team & Development</p>
-    <p>15% - Marketing</p>
-    <p>10% - Liquidity</p>
-    <p>5% - Reserve</p>
-  </section>  <section>
-    <h2>🚀 Roadmap</h2>
-    <p>✔️ Phase 1: Token Creation & Website</p>
-    <p>✔️ Phase 2: Airdrop Campaign & Social Launch</p>
-    <p>🔜 Phase 3: DEX Listing & Partnerships</p>
-    <p>🔜 Phase 4: Utility Integration & Mobile App</p>
-  </section>  <section class="socials">
-    <h2>Follow Us</h2>
-    <a href="https://www.instagram.com/alpcoinofficial" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
-    </a>
-    <a href="https://youtube.com/@alpcoinofficial?si=Tesi_G78kQVG9qYw" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-    </a>
-    <a href="https://twitter.com/AlpcoinGlobal" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
-    </a>
-  </section>  <footer>
-    <p>&copy; 2025 Alpcoin. All rights reserved.</p>
-  </footer>
+  <main>
+    <h1>Alpcoin</h1>
+    <p>The Token of Hope, Unity and Change</p>
+  </main>
+
+  <div class="socials">
+    <a href="https://www.instagram.com/alpcoinofficial" target="_blank">Instagram</a>
+    <a href="https://youtube.com/@alpcoinofficial?si=Tesi_G78kQVG9qYw" target="_blank">YouTube</a>
+    <a href="https://twitter.com/AlpcoinGlobal" target="_blank">Twitter</a>
+  </div>
 </body>
 </html>
