@@ -1,103 +1,98 @@
-<!DOCTYPE html><html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alpcoin ($ALP)</title>
-    <link rel="icon" href="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-        background-size: cover;
-        color: white;
-        text-align: center;
-      }
-      header {
-        padding: 60px 20px 20px;
-      }
-      header img {
-        width: 120px;
-        height: 120px;
-        border-radius: 20px;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-      }
-      h1 {
-        font-size: 48px;
-        margin: 20px 0 10px;
-        text-shadow: 2px 2px 8px #000;
-      }
-      h2 {
-        font-size: 24px;
-        margin: 0 0 30px;
-        text-shadow: 1px 1px 4px #000;
-      }
-      .buttons {
-        margin: 20px auto;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-      .buttons a, .buttons button {
-        padding: 12px 24px;
-        background-color: #ffffff22;
-        border: 2px solid white;
-        color: white;
-        font-size: 16px;
-        border-radius: 8px;
-        text-decoration: none;
-        transition: 0.3s;
-      }
-      .buttons a:hover, .buttons button:hover {
-        background-color: white;
-        color: #000;
-      }
-      .socials {
-        margin-top: 40px;
-      }
-      .socials a {
-        margin: 0 10px;
-        display: inline-block;
-        font-size: 24px;
-        color: white;
-        text-decoration: none;
-      }
-      .socials a:hover {
-        color: #ffd700;
-      }
-      footer {
-        margin-top: 60px;
-        padding: 20px;
-        font-size: 14px;
-        background-color: rgba(0,0,0,0.4);
-      }
-    </style>
-    <script>
-      function connectWallet() {
-        alert('Connect Wallet funksiyasi tez orada ishga tushadi.');
-      }
-    </script>
-  </head>
-  <body>
-    <header>
-      <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
-      <h1>Alpcoin</h1>
-      <h2>$ALP</h2>
-      <div class="buttons">
-        <a href="https://t.me/alpcoinoficcal" target="_blank">Join Telegram</a>
-        <button onclick="connectWallet()">Connect Wallet</button>
-        <button>🌐 Language</button>
-      </div>
-      <div class="socials">
-        <a href="https://www.instagram.com/alpcoinofficial" target="_blank">📷</a>
-        <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶️</a>
-        <a href="https://x.com/AlpcoinGlobal" target="_blank">🐦</a>
-      </div>
-    </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alpcoin</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://i.postimg.cc/qRF5csrf/sea-mountain-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      color: white;
+    }
+    .container {
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.5);
+      margin: 40px auto;
+      max-width: 600px;
+      border-radius: 20px;
+    }
+    img.logo {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    a.btn, button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    a.btn.telegram {
+      background-color: #0088cc;
+      color: white;
+    }
+    button.wallet {
+      background-color: #4CAF50;
+      color: white;
+    }
+    select.language {
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      margin: 10px;
+    }
+    .social-icons a {
+      font-size: 24px;
+      margin: 10px;
+      text-decoration: none;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo">
+    <h1>Alpcoin</h1>
+    <h2>$ALP</h2>
+
+    <a href="https://t.me/alpcoinoficcal" target="_blank" class="btn telegram">Join Telegram</a>
+    <button class="wallet">Connect Wallet</button>
+
+    <select class="language">
+      <option selected>🌐 Language</option>
+      <option value="en">English 🇬🇧</option>
+      <option value="uz">O‘zbek 🇺🇿</option>
+    </select>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/alpcoinofficial" target="_blank">📷</a>
+      <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶️</a>
+      <a href="https://x.com/AlpcoinGlobal" target="_blank">🐦</a>
+    </div>
+
     <footer>
-      &copy; 2025 Alpcoin. All rights reserved.
+      © 2025 Alpcoin. All rights reserved.
     </footer>
-  </body>
+  </div>
+</body>
 </html>
