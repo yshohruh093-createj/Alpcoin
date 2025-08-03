@@ -3,74 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin – Humanitarian Crypto</title>
+  <title>Alpcoin - Official Site</title>
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
+      padding: 0;
       background: url('https://i.postimg.cc/RZSN0MPJ/id53b3.jpg') no-repeat center center fixed;
       background-size: cover;
+      font-family: Arial, sans-serif;
       color: white;
       text-align: center;
     }
+
     .overlay {
-      background-color: rgba(0,0,0,0.6);
-      padding: 50px 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       min-height: 100vh;
     }
+
     .logo {
-      max-width: 150px;
+      max-width: 200px;
+      border-radius: 12px;
       margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
     }
-    .links a {
-      color: white;
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .socials a {
       margin: 0 10px;
-      text-decoration: none;
-      font-size: 18px;
-    }
-    .btn {
-      display: inline-block;
-      background-color: #00aced;
       color: white;
-      padding: 12px 24px;
-      margin-top: 20px;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      cursor: pointer;
+      font-size: 24px;
       text-decoration: none;
     }
-    .lang-select {
+
+    .wallet-btn {
       margin-top: 20px;
+      padding: 10px 20px;
+      background: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 6px;
       font-size: 16px;
+      cursor: pointer;
+    }
+
+    .lang-selector {
+      margin-top: 15px;
+    }
+
+    select {
       padding: 6px 10px;
+      font-size: 14px;
       border-radius: 6px;
       border: none;
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo" />
-    <h1>Welcome to Alpcoin</h1>
-    <p>The humanitarian and future-driven cryptocurrency.</p>
-
-    <div class="links">
+  <div class="overlay"></div>
+  <div class="content">
+    <img class="logo" src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
+    <div class="title">Welcome to Alpcoin</div>
+    
+    <div class="socials">
       <a href="https://t.me/alpcoinoficcal" target="_blank">Telegram</a>
       <a href="https://www.instagram.com/alpcoinofficial" target="_blank">Instagram</a>
       <a href="https://youtube.com/@alpcoinofficial" target="_blank">YouTube</a>
-      <a href="https://x.com/AlpcoinGlobal" target="_blank">Twitter</a>
+      <a href="https://twitter.com/AlpcoinGlobal" target="_blank">Twitter</a>
     </div>
 
-    <a href="#" class="btn">Connect Wallet</a>
+    <button class="wallet-btn">Connect Wallet</button>
 
-    <br />
-
-    <select class="lang-select">
-      <option>English</option>
-      <option>O'zbekcha</option>
-      <option>Русский</option>
-    </select>
+    <div class="lang-selector">
+      <select>
+        <option>English</option>
+        <option>O‘zbekcha</option>
+        <option>Русский</option>
+      </select>
+    </div>
   </div>
 </body>
 </html>
