@@ -2,61 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alpcoin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+      padding: 0;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('https://images.unsplash.com/photo-1612831455542-d0aa098d7e95?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: url('https://i.postimg.cc/RZSN0MPJ/id53b3.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       text-align: center;
+      position: relative;
     }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
     .container {
-      padding: 60px 20px;
-      background-color: rgba(0, 0, 0, 0.5); /* qora shaffof fon */
-      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+      padding: 40px 20px;
       max-width: 600px;
-      margin: auto;
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
+
+    .logo {
+      max-width: 120px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
     .title {
-      font-size: 3em;
-      font-weight: bold;
+      font-size: 2.5em;
+      font-weight: 800;
+      margin-bottom: 10px;
     }
+
     .subtitle {
-      font-size: 1.5em;
+      font-size: 1.4em;
       margin-bottom: 30px;
+      opacity: 0.9;
     }
+
     .buttons a {
       display: inline-block;
       margin: 10px;
-      padding: 12px 25px;
+      padding: 12px 28px;
       border: 2px solid white;
       color: white;
       text-decoration: none;
       border-radius: 30px;
       transition: 0.3s;
+      font-weight: 600;
     }
+
     .buttons a:hover {
       background-color: white;
-      color: black;
+      color: #000;
     }
+
+    .language-switcher {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 12px;
+      border: none;
+      font-size: 1em;
+    }
+
+    .social-icons {
+      margin-top: 25px;
+      font-size: 1.5em;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 12px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffcc00;
+    }
+
     .footer {
-      margin-top: 50px;
-      font-size: 0.9em;
+      margin-top: 40px;
+      font-size: 0.85em;
+      opacity: 0.7;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo" />
     <div class="title">Alpcoin</div>
-    <div class="subtitle">$ALP — Future of Web3</div>
+    <div class="subtitle">$ALP – The Future of Finance</div>
+
     <div class="buttons">
-      <a href="https://t.me/alpcoinoficcal" target="_blank">Join Telegram</a>
-      <a href="#">Connect Wallet</a>
+      <a href="https://t.me/alpcoinoficcal" target="_blank"><i class="fab fa-telegram"></i> Join Telegram</a>
+      <a href="#"><i class="fa-solid fa-wallet"></i> Connect Wallet</a>
     </div>
+
+    <select class="language-switcher" onchange="changeLanguage(this.value)">
+      <option value="en">🌐 English</option>
+      <option value="uz">🇺🇿 Oʻzbek</option>
+      <option value="ru">🇷🇺 Русский</option>
+    </select>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/alpcoinofficial" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@alpcoinofficial" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://x.com/AlpcoinGlobal" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
+
     <div class="footer">© 2025 Alpcoin. All rights reserved.</div>
   </div>
+
+  <script>
+    function changeLanguage(lang) {
+      alert("Til o‘zgartirish hali yoqilmagan. Tanlangan til: " + lang);
+      // Future: Translate content dynamically
+    }
+  </script>
 </body>
 </html>
