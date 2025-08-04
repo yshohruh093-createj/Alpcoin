@@ -3,97 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin – Official Site</title>
-  <link rel="icon" href="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" />
+  <title>Alpcoin | Official Site</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('https://cdn.pixabay.com/photo/2023/09/21/02/18/hunter-peak-8568915_1280.jpg') no-repeat center center fixed;
-      background-size: cover;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: url('https://cdn.pixabay.com/photo/2023/12/24/04/08/hunter-peak-8568915_1280.jpg') center/cover no-repeat;
       color: white;
       text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(2px);
     }
+
     header {
-      padding: 40px 20px 20px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+
     .logo {
-      width: 120px;
-      border-radius: 50%;
-      border: 2px solid white;
+      height: 64px;
     }
-    h1 {
-      margin-top: 10px;
-      font-size: 2.5rem;
+
+    .controls {
+      display: flex;
+      gap: 1rem;
     }
-    nav {
-      margin-top: 30px;
-    }
-    nav a {
-      margin: 0 15px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .buttons {
-      margin: 30px 0;
-    }
-    .buttons button {
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 10px;
+
+    .btn, select {
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
       border: none;
-      background: #00aaff;
-      color: white;
       cursor: pointer;
+      font-size: 0.9rem;
     }
-    .partners {
-      margin: 50px 0;
+
+    .wallet-btn {
+      background: #00bcd4;
+      color: white;
     }
-    .partners img {
-      height: 60px;
-      margin: 0 15px;
-      vertical-align: middle;
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
     }
+
+    main h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      text-shadow: 0 0 10px #000;
+    }
+
+    main p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      text-shadow: 0 0 8px #000;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .socials a img {
+      width: 36px;
+      height: 36px;
+      filter: drop-shadow(0 0 3px #000);
+    }
+
     footer {
-      margin-top: 60px;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.4);
+      padding: 1rem;
+      font-size: 0.8rem;
+      opacity: 0.6;
     }
   </style>
 </head>
 <body>
-
   <header>
     <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo" />
-    <h1>Alpcoin – Humanitarian Crypto Project</h1>
-
-    <nav>
-      <a href="https://t.me/alpcoinoficcal" target="_blank">Telegram</a>
-      <a href="https://www.instagram.com/alpcoinofficial" target="_blank">Instagram</a>
-      <a href="https://youtube.com/@alpcoinofficial" target="_blank">YouTube</a>
-      <a href="https://twitter.com/AlpcoinGlobal" target="_blank">Twitter</a>
-    </nav>
+    <div class="controls">
+      <select>
+        <option>EN</option>
+        <option>UZ</option>
+      </select>
+      <button class="btn wallet-btn">Connect Wallet</button>
+    </div>
   </header>
 
-  <div class="buttons">
-    <button onclick="alert('Coming soon')">Connect Wallet</button>
-    <button onclick="alert('Til tanlash yaqin kunlarda')">🌐 Language</button>
-    <button onclick="alert('Airdrop bosqichi tez orada')">💸 Airdrop</button>
-    <button onclick="alert('Saytga kirish faollashtiriladi')">🔐 Kirish</button>
+  <main>
+    <h1>Welcome to Alpcoin</h1>
+    <p>
+      A humanitarian and future-driven crypto project built on values, trust, and impact.
+      Powered by the community — for the people.
+    </p>
+  </main>
+
+  <div class="socials">
+    <a href="https://t.me/alpcoinoficcal" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111644.png" alt="Telegram" /></a>
+    <a href="https://twitter.com/AlpcoinGlobal" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" /></a>
+    <a href="https://www.instagram.com/alpcoinofficial" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+    <a href="https://youtube.com/@alpcoinofficial?si=Tesi_G78kQVG9qYw" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
   </div>
 
-  <section class="partners">
-    <h2>Hamkorlar</h2>
-    <img src="https://cryptologos.cc/logos/toncoin-ton-logo.png?v=032" alt="TON">
-    <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png?v=032" alt="Binance">
-    <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png?v=032" alt="Ethereum">
-  </section>
-
   <footer>
-    <p>&copy; 2025 Alpcoin. All rights reserved.</p>
+    © 2025 Alpcoin. All rights reserved.
   </footer>
-
 </body>
 </html>
