@@ -3,98 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin</title>
+  <title>Alpcoin - Welcome to the Future</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('https://i.postimg.cc/sgPY6Zb0/mountain-sea-bg.jpg') no-repeat center center fixed;
+      font-family: sans-serif;
+      background: url('https://i.postimg.cc/WzYvGbfg/sea-mountain.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
-    }
-
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.5);
-      min-height: 100vh;
-      padding: 40px 20px;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
     }
 
-    .logo {
-      width: 180px;
-      height: auto;
-      margin-bottom: 30px;
+    header {
+      padding: 20px;
     }
 
-    .title {
-      font-size: 36px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 5px #000;
+    header img {
+      max-width: 150px;
+      margin-bottom: 10px;
     }
 
-    .btn {
-      padding: 14px 28px;
-      font-size: 18px;
-      border: none;
-      border-radius: 12px;
-      margin: 10px;
-      cursor: pointer;
-      background-color: #00b894;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .button {
+      background-color: #0b74de;
       color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
       transition: 0.3s;
-      box-shadow: 2px 2px 8px #000;
     }
 
-    .btn:hover {
-      background-color: #019875;
+    .button:hover {
+      background-color: #095ab3;
+    }
+
+    .lang-select {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .lang-select select {
+      padding: 5px 10px;
+      font-size: 1rem;
     }
 
     .socials {
-      margin-top: 30px;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
+      margin-top: 20px;
     }
 
-    .socials a img {
-      width: 36px;
-      height: 36px;
+    .socials a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
     }
 
-    @media (max-width: 600px) {
-      .title {
-        font-size: 26px;
-      }
+    .wallet-btn {
+      margin-top: 20px;
+    }
 
-      .btn {
-        padding: 12px 20px;
-        font-size: 16px;
-      }
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #ddd;
+    }
 
-      .logo {
-        width: 140px;
-      }
+    .ad-banner {
+      margin: 30px auto;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      width: 80%;
+      border-radius: 10px;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 1.8rem; }
+      p { font-size: 1rem; }
+      .button { font-size: 1rem; padding: 12px 20px; }
+      .ad-banner { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo"/>
-    <div class="title">Kelayotgan kelajakni birga quramiz</div>
-    <button class="btn">Enter Website</button>
-    <button class="btn">Connect Wallet</button>
 
-    <div class="socials">
-      <a href="https://t.me/alpcoinoficcal" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"></a>
-      <a href="https://twitter.com/AlpcoinGlobal" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter"></a>
-      <a href="https://instagram.com/alpcoinofficial" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
-      <a href="https://youtube.com/@alpcoinofficial" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Youtube%28amin%29.png" alt="YouTube"></a>
-    </div>
+  <div class="lang-select">
+    <select>
+      <option value="en">English</option>
+      <option value="uz">O'zbek</option>
+      <option value="ru">Русский</option>
+    </select>
   </div>
+
+  <header>
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo">
+    <h1>Alpcoin - Kelajakka Kirish</h1>
+    <p>Biz bilan kelajakka qadam qo‘ying. Moliyaviy erkinlik, ishonch va barqarorlik!</p>
+  </header>
+
+  <div class="wallet-btn">
+    <button class="button">Connect Wallet</button>
+  </div>
+
+  <div class="socials">
+    <a href="https://t.me/alpcoinoficcal" target="_blank">Telegram</a>
+    <a href="https://instagram.com/alpcoinofficial" target="_blank">Instagram</a>
+    <a href="https://youtube.com/@alpcoinofficial" target="_blank">YouTube</a>
+    <a href="https://x.com/AlpcoinGlobal" target="_blank">Twitter</a>
+  </div>
+
+  <div class="ad-banner">
+    Reklama joyi: Bu yerga siz ham o'z loyihangizni joylashtirishingiz mumkin. Biz bilan hamkorlik qiling!
+  </div>
+
+  <footer>
+    &copy; 2025 Alpcoin. All rights reserved.
+  </footer>
+
 </body>
 </html>
