@@ -2,137 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin | Official Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpcoin - Rasmiy Sayt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: sans-serif;
-      background: url('https://i.postimg.cc/YqXJkR6p/mountain-sea.jpg') no-repeat center center fixed;
+      font-family: 'Montserrat', sans-serif;
+      background: url('https://i.postimg.cc/N0dBzmtd/bg-mountain-sea.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
       text-align: center;
     }
 
-    .logo img {
-      margin-top: 30px;
-      width: 160px;
-      height: 160px;
-      border-radius: 20px;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      gap: 20px;
+      backdrop-filter: brightness(0.8);
     }
 
-    h1 {
-      margin-top: 20px;
-      font-size: 2.5rem;
+    .logo {
+      max-width: 150px;
     }
 
-    .slogan {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: #1e90ff;
-      color: white;
-      padding: 12px 24px;
-      margin: 10px;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 18px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #0057b8;
-    }
-
-    .language {
+    .lang-wallet {
       position: absolute;
       top: 20px;
       right: 20px;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 5px 10px;
-      border-radius: 10px;
+      display: flex;
+      gap: 10px;
     }
 
-    .wallet {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-    }
-
-    .airdrop-modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .airdrop-content {
-      background: #222;
-      padding: 30px;
-      border-radius: 20px;
-      text-align: center;
-      max-width: 90%;
-    }
-
-    .close {
-      color: red;
-      font-size: 20px;
-      position: absolute;
-      top: 15px;
-      right: 25px;
+    .lang-select, .wallet-btn {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
       cursor: pointer;
+    }
+
+    .main-btn {
+      padding: 14px 28px;
+      font-size: 18px;
+      background-color: #00aaff;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .main-btn:hover {
+      background-color: #0088cc;
+    }
+
+    .socials {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .socials a {
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-
-  <div class="wallet">
-    <a href="#" class="btn">🔗 Connect Wallet</a>
+  <div class="lang-wallet">
+    <select class="lang-select">
+      <option>🇺🇿 UZ</option>
+      <option>🇷🇺 RU</option>
+      <option>🇺🇸 EN</option>
+    </select>
+    <button class="wallet-btn">🔗 Connect Wallet</button>
   </div>
 
-  <div class="language">
-    🌐 O'zbek | English
+  <div class="container">
+    <img class="logo" src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
+    <h1>Kelajakni birga quramiz</h1>
+    <button class="main-btn" onclick="location.href='main.html'">🔓 Enter Website</button>
   </div>
 
-  <div class="logo">
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo">
+  <div class="socials">
+    <a href="https://t.me/alpcoinoficcal" target="_blank">📢</a>
+    <a href="https://www.instagram.com/alpcoinofficial" target="_blank">📸</a>
+    <a href="https://youtube.com/@alpcoinofficial?si=Tesi_G78kQVG9qYw" target="_blank">▶️</a>
+    <a href="https://twitter.com/AlpcoinGlobal" target="_blank">🐦</a>
   </div>
-
-  <h1>Alpcoin</h1>
-  <p class="slogan">Kelajakni birga quramiz</p>
-
-  <div class="buttons">
-    <a href="#airdrop" class="btn" onclick="openAirdrop()">🎁 Claim Airdrop</a>
-  </div>
-
-  <!-- Airdrop Modal -->
-  <div class="airdrop-modal" id="airdropModal">
-    <div class="airdrop-content">
-      <span class="close" onclick="closeAirdrop()">✖</span>
-      <h2>🎁 Alpcoin Airdrop</h2>
-      <p>Jetton manzilingizni kiriting:</p>
-      <input type="text" placeholder="EQC..." style="padding:10px; width:80%; border-radius:8px;" />
-      <br><br>
-      <a href="#" class="btn">Yuborish</a>
-    </div>
-  </div>
-
-  <script>
-    function openAirdrop() {
-      document.getElementById("airdropModal").style.display = "flex";
-    }
-    function closeAirdrop() {
-      document.getElementById("airdropModal").style.display = "none";
-    }
-  </script>
-
 </body>
 </html>
