@@ -1,97 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin Official</title>
+  <meta charset="UTF-8">
+  <title>Alpcoin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      background: url('https://i.postimg.cc/RZSN0MPJ/id53b3.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background-image: url('https://i.postimg.cc/RZSN0MPJ/id53b3.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* matn o'qilishi uchun fon ustida qora qatlam */
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
       color: white;
-      text-shadow: 1px 1px 3px black;
+      padding-top: 120px;
     }
 
     .logo {
       width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 3px solid white;
-      margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+    .social-icons {
+      margin-top: 30px;
     }
 
-    .socials {
-      margin: 20px 0;
-      display: flex;
-      gap: 15px;
-    }
-
-    .socials a {
+    .social-icons a {
       color: white;
+      font-size: 26px;
+      margin: 0 10px;
       text-decoration: none;
-      font-size: 1.5rem;
+      transition: transform 0.2s ease;
     }
 
-    .enter-btn {
-      background-color: #ffffffcc;
-      color: black;
-      padding: 12px 24px;
-      font-size: 1rem;
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .btn-group {
+      margin-top: 40px;
+    }
+
+    .button {
+      padding: 12px 30px;
+      margin: 10px;
       border: none;
       border-radius: 30px;
+      background: #00b894;
+      color: white;
+      font-size: 16px;
       cursor: pointer;
       transition: background 0.3s ease;
     }
 
-    .enter-btn:hover {
-      background-color: #fff;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.9rem;
-      text-align: center;
-      width: 100%;
+    .button:hover {
+      background: #019875;
     }
   </style>
 </head>
 <body>
+  <div class="overlay"></div>
+  <div class="content">
+    <img class="logo" src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo">
+    <h1>Kelajakni birga quramiz</h1>
 
-  <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo" />
-  
-  <h1>Alpcoin</h1>
-  <p>Kelajakni birga quramiz</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/alpcoinofficial" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/alpcoinoficcal" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="https://twitter.com/AlpcoinGlobal" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://youtube.com/@alpcoinofficial" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
 
-  <div class="socials">
-    <a href="https://t.me/alpcoinoficcal" target="_blank">Telegram</a>
-    <a href="https://twitter.com/AlpcoinGlobal" target="_blank">Twitter</a>
-    <a href="https://www.instagram.com/alpcoinofficial" target="_blank">Instagram</a>
-    <a href="https://youtube.com/@alpcoinofficial" target="_blank">YouTube</a>
+    <div class="btn-group">
+      <button class="button">Connect Wallet</button>
+      <button class="button" onclick="location.href='main.html'">🚀 Kelajakka kirish</button>
+    </div>
   </div>
-
-  <button class="enter-btn" onclick="alert('Website ichki sahifasi hali tayyor emas')">Enter Website</button>
-
-  <footer>&copy; 2025 Alpcoin. All rights reserved.</footer>
-
 </body>
 </html>
