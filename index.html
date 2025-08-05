@@ -1,136 +1,138 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin - Kelajakni birga quramiz</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>Alpcoin | Official Site</title>
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }<div class="buttons">
-  <a href="info.html" class="btn">📘 About Alpcoin</a>
-  <a href="airdrop.html" class="btn">🎁 Claim Airdrop</a>
-</div>
-
-<style>
-  .buttons {
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .btn {
-    display: inline-block;
-    background-color: #1e90ff;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background 0.3s;
-  }
-
-  .btn:hover {
-    background-color: #0057b8;
-  }
-</style>
     body {
-      background: url('https://i.postimg.cc/pdRJvRsf/mountain-sea.jpg') no-repeat center center fixed;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: url('https://i.postimg.cc/YqXJkR6p/mountain-sea.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
       text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
-    .logo {
-      margin-top: 60px;
-    }
+
     .logo img {
-     <div class="buttons">
-  <a href="info.html" class="btn">📘 About Alpcoin</a>
-  <a href="airdrop.html" class="btn">🎁 Claim Airdrop</a>
-</div> 
+      margin-top: 30px;
       width: 160px;
       height: 160px;
-      border-radius: 50%;
-      border: 4px solid white;
+      border-radius: 20px;
     }
-    .social {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+
+    h1 {
       margin-top: 20px;
+      font-size: 2.5rem;
     }
-    .social a img {
-      width: 30px;
-      height: 30px;
-      transition: transform 0.2s ease;
+
+    .slogan {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
     }
-    .social a img:hover {
-      transform: scale(1.2);
-    }
-    .language-select, .wallet-button {
-      margin: 15px auto;
-    }
-    select {
-      padding: 8px 16px;
-      font-size: 16px;
-      border-radius: 10px;
-      border: none;
-    }
-    .wallet-button button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #00b894;
+
+    .btn {
+      display: inline-block;
+      background-color: #1e90ff;
       color: white;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
+      padding: 12px 24px;
+      margin: 10px;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
       transition: background 0.3s;
     }
-    .wallet-button button:hover {
-      background-color: #019875;
+
+    .btn:hover {
+      background-color: #0057b8;
     }
-    footer {
-      margin-bottom: 30px;
-      font-size: 18px;
-      font-weight: 500;
-      text-shadow: 1px 1px 4px #000;
+
+    .language {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+
+    .wallet {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .airdrop-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .airdrop-content {
+      background: #222;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 90%;
+    }
+
+    .close {
+      color: red;
+      font-size: 20px;
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
 
+  <div class="wallet">
+    <a href="#" class="btn">🔗 Connect Wallet</a>
+  </div>
+
+  <div class="language">
+    🌐 O'zbek | English
+  </div>
+
   <div class="logo">
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo">
   </div>
 
-  <div class="language-select">
-    <select>
-      <option value="uz">O'zbek</option>
-      <option value="en">English</option>
-    </select>
+  <h1>Alpcoin</h1>
+  <p class="slogan">Kelajakni birga quramiz</p>
+
+  <div class="buttons">
+    <a href="#airdrop" class="btn" onclick="openAirdrop()">🎁 Claim Airdrop</a>
   </div>
 
-  <div class="wallet-button">
-    <button>Connect Wallet</button>
+  <!-- Airdrop Modal -->
+  <div class="airdrop-modal" id="airdropModal">
+    <div class="airdrop-content">
+      <span class="close" onclick="closeAirdrop()">✖</span>
+      <h2>🎁 Alpcoin Airdrop</h2>
+      <p>Jetton manzilingizni kiriting:</p>
+      <input type="text" placeholder="EQC..." style="padding:10px; width:80%; border-radius:8px;" />
+      <br><br>
+      <a href="#" class="btn">Yuborish</a>
+    </div>
   </div>
 
-  <div class="social">
-    <a href="https://instagram.com/alpcoinofficial" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
-    <a href="https://youtube.com/@alpcoinofficial" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
-    <a href="https://x.com/AlpcoinGlobal" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
-    <a href="https://t.me/alpcoinoficcal" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111644.png" alt="Telegram"></a>
-  </div>
-
-  <footer>
-    Kelajakni birga quramiz...
-  </footer>
+  <script>
+    function openAirdrop() {
+      document.getElementById("airdropModal").style.display = "flex";
+    }
+    function closeAirdrop() {
+      document.getElementById("airdropModal").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
