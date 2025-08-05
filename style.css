@@ -53,3 +53,47 @@
   font-size: 15px;
   line-height: 1.6;
 }
+.home-main {
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+}
+
+.main-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px black;
+}
+
+.intro-text {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px black;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.feature-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.feature-box:hover {
+  background: #00f7ff;
+  color: black;
+  transform: scale(1.05);
+}
