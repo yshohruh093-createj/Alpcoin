@@ -1,0 +1,33 @@
+<!-- airdrop.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alpcoin Airdrop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="airdrop-page">
+  <div class="container">
+    <h1>Claim Free Alpcoin</h1>
+    <p>Enter your TON wallet address to receive free ALP tokens.</p>
+    <form id="airdropForm">
+      <input type="text" id="wallet" placeholder="Your TON Wallet Address" required>
+      <button type="submit">Claim Airdrop</button>
+    </form>
+    <p id="resultMessage"></p>
+    <a href="index.html">← Back to Home</a>
+  </div>
+
+  <script>
+    document.getElementById('airdropForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const address = document.getElementById('wallet').value.trim();
+      if (address.length === 48 || address.length === 51) {
+        document.getElementById('resultMessage').innerText = "✅ Request received. Tokens will be distributed soon.";
+      } else {
+        document.getElementById('resultMessage').innerText = "❌ Invalid TON address.";
+      }
+    });
+  </script>
+</body>
+</html>
