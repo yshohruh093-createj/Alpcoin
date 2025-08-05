@@ -1,33 +1,46 @@
-<!-- airdrop.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Alpcoin Airdrop</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alpcoin | Claim Airdrop</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="airdrop-page">
-  <div class="container">
-    <h1>Claim Free Alpcoin</h1>
-    <p>Enter your TON wallet address to receive free ALP tokens.</p>
-    <form id="airdropForm">
-      <input type="text" id="wallet" placeholder="Your TON Wallet Address" required>
-      <button type="submit">Claim Airdrop</button>
-    </form>
-    <p id="resultMessage"></p>
-    <a href="index.html">← Back to Home</a>
-  </div>
+<body>
+  <div class="background"></div>
 
-  <script>
-    document.getElementById('airdropForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const address = document.getElementById('wallet').value.trim();
-      if (address.length === 48 || address.length === 51) {
-        document.getElementById('resultMessage').innerText = "✅ Request received. Tokens will be distributed soon.";
-      } else {
-        document.getElementById('resultMessage').innerText = "❌ Invalid TON address.";
-      }
-    });
-  </script>
+  <header>
+    <img src="logo.png" alt="Alpcoin Logo" class="logo" />
+    <div class="socials">
+      <a href="https://t.me/alpcoinoficcal" target="_blank">📨</a>
+      <a href="https://twitter.com/AlpcoinGlobal" target="_blank">🐦</a>
+      <a href="https://instagram.com/alpcoinofficial" target="_blank">📷</a>
+      <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶️</a>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="headline">🎁 Claim your Alpcoin Airdrop</h1>
+    <div style="max-width: 600px; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; font-size: 18px;">
+      <p><strong>Welcome!</strong> You are eligible to receive free ALP tokens as part of our community airdrop campaign.</p>
+      <p><strong>To claim your airdrop:</strong></p>
+      <ol>
+        <li>Connect your TON wallet</li>
+        <li>Verify eligibility</li>
+        <li>Click the claim button</li>
+      </ol>
+      <button class="connect-btn">Connect Wallet</button>
+      <button class="enter-btn" style="margin-left: 15px;">Claim Airdrop</button>
+      <br /><br />
+      <a href="home.html" class="enter-btn">⬅ Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <select class="language">
+      <option>UZ</option>
+      <option>EN</option>
+    </select>
+  </footer>
 </body>
 </html>
