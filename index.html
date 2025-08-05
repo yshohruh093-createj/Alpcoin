@@ -4,95 +4,126 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alpcoin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: url('https://i.postimg.cc/4NnmX5mF/bg-sea-mountain.jpg') no-repeat center center fixed;
+      background: url('https://i.postimg.cc/BQ6GZ2t4/sea-mountain-bg.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: white;
+      color: #fff;
       text-align: center;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header {
+      padding: 20px;
+    }
+
+    header img {
+      width: 120px;
+      height: auto;
+    }
+
+    .content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
       padding: 20px;
     }
 
-    .logo {
-      max-width: 200px;
-      margin: 0 auto 20px;
+    .tagline {
+      font-size: 1.4rem;
+      margin-top: 20px;
+      background-color: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 10px;
     }
 
-    h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    .buttons {
+      margin-top: 40px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-    }
-
-    .btn {
-      background: rgba(255,255,255,0.1);
-      border: 2px solid white;
-      color: white;
+    .buttons button, .buttons a {
       padding: 12px 24px;
-      margin: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background-color: #00b894;
+      color: white;
       text-decoration: none;
-      font-size: 1em;
-      border-radius: 25px;
-      transition: 0.3s;
-      backdrop-filter: blur(10px);
+      transition: background 0.3s;
     }
 
-    .btn:hover {
-      background: rgba(255,255,255,0.3);
+    .buttons button:hover, .buttons a:hover {
+      background-color: #019875;
     }
 
     .socials {
-      margin-top: 30px;
+      padding: 20px;
       display: flex;
-      justify-content: center;
       gap: 20px;
-      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .socials a img {
-      width: 32px;
-      height: 32px;
-      filter: brightness(100%);
-      transition: 0.3s;
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s;
     }
 
-    .socials a img:hover {
-      filter: brightness(150%);
+    .socials a:hover img {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 600px) {
+      .tagline {
+        font-size: 1.1rem;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo"/>
-  <h1>Alpcoin</h1>
-  <p>Kelajakni birga quramiz</p>
+  <header>
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
+  </header>
 
-  <div>
-    <a href="https://t.me/alpcoinoficcal" class="btn">Telegram</a>
-    <a href="#" class="btn">Connect Wallet</a>
-    <a href="#" class="btn">Enter Website</a>
+  <div class="content">
+    <div class="tagline">Kelajakni birga quramiz</div>
+
+    <div class="buttons">
+      <a href="#" onclick="alert('Til tanlash hali faol emas')">🇺🇿 O'zbekcha</a>
+      <a href="#" onclick="alert('Language selector coming soon')">🇬🇧 English</a>
+      <a href="#" onclick="alert('Wallet ulanish hali faol emas')">💼 Connect Wallet</a>
+      <a href="#" onclick="alert('Hali mavjud emas')">🌐 Enter Website</a>
+    </div>
   </div>
 
   <div class="socials">
-    <a href="https://twitter.com/AlpcoinGlobal"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
-    <a href="https://instagram.com/alpcoinofficial"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
-    <a href="https://youtube.com/@alpcoinofficial"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+    <a href="https://t.me/alpcoinoficcal" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" /></a>
+    <a href="https://instagram.com/alpcoinofficial" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="Instagram" /></a>
+    <a href="https://youtube.com/@alpcoinofficial" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
+    <a href="https://x.com/AlpcoinGlobal" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X" /></a>
   </div>
 </body>
 </html>
