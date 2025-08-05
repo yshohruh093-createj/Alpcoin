@@ -1,160 +1,107 @@
-📁 Fayl: index.html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alpcoin</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://i.postimg.cc/DZChG43H/bg-clear.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 40px 20px 20px;
+    }
+
+    header img {
+      max-width: 150px;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: 2.5em;
+    }
+
+    p.slogan {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .main-btn {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid white;
+      padding: 15px 30px;
+      font-size: 1em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      color: white;
+    }
+
+    .main-btn:hover {
+      background-color: white;
+      color: #000;
+    }
+
+    .socials {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .socials a img {
+      width: 28px;
+      height: 28px;
+      filter: brightness(0) invert(1);
+      transition: 0.3s;
+    }
+
+    .socials a:hover img {
+      transform: scale(1.2);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+      .main-btn {
+        padding: 12px 24px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="background"></div>
+
   <header>
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo">
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo">
+    <h1>Alpcoin</h1>
+    <p class="slogan">Kelajakni birga quramiz</p>
+    <button class="main-btn" onclick="alert('Ichki sahifa hali tayyor emas.')">Enter Website</button>
+
     <div class="socials">
-      <a href="https://t.me/alpcoinoficcal" target="_blank"><i class="ri-telegram-fill"></i></a>
-      <a href="https://www.instagram.com/alpcoinofficial" target="_blank"><i class="ri-instagram-fill"></i></a>
-      <a href="https://twitter.com/AlpcoinGlobal" target="_blank"><i class="ri-twitter-x-fill"></i></a>
-      <a href="https://youtube.com/@alpcoinofficial" target="_blank"><i class="ri-youtube-fill"></i></a>
+      <a href="https://t.me/alpcoinoficcal" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"></a>
+      <a href="https://www.instagram.com/alpcoinofficial" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+      <a href="https://youtube.com/@alpcoinofficial" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+      <a href="https://x.com/AlpcoinGlobal" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" alt="Twitter X"></a>
     </div>
-    <button class="connect-btn">Connect Wallet</button>
   </header>
 
-  <main>
-    <h1 class="headline">Kelajakni birga quramiz</h1>
-    <button class="enter-btn">Enter Website</button>
-  </main>
-
   <footer>
-    <select class="language">
-      <option value="uz">UZ</option>
-      <option value="en">EN</option>
-    </select>
+    &copy; 2025 Alpcoin. All rights reserved.
   </footer>
+
 </body>
 </html>
-
-📁 Fayl: style.css
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
-  height: 100%;
-  font-family: 'Arial', sans-serif;
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
-
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1519985176271-adb1088fa94c') no-repeat center center/cover;
-  z-index: -1;
-  filter: brightness(0.6);
-}
-
-.logo {
-  width: 100px;
-  height: auto;
-  margin: 10px auto;
-  display: block;
-}
-
-header {
-  position: absolute;
-  top: 10px;
-  width: 100%;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.socials a {
-  color: white;
-  font-size: 24px;
-  margin-left: 15px;
-  transition: transform 0.2s;
-}
-
-.socials a:hover {
-  transform: scale(1.2);
-  color: #00f7ff;
-}
-
-.connect-btn {
-  padding: 8px 16px;
-  background: #00f7ff;
-  border: none;
-  border-radius: 8px;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-main {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.headline {
-  font-size: 32px;
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 5px black;
-}
-
-.enter-btn {
-  font-size: 18px;
-  padding: 10px 24px;
-  background: #00f7ff;
-  color: black;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-footer {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-
-.language {
-  padding: 6px;
-  background: rgba(255, 255, 255, 0.8);
-  color: #000;
-  border-radius: 5px;
-}
-
-
----
-
-✅ Endi quyidagini qil:
-
-1. index.html va style.css fayllarini GitHub sahifangga qo'y.
-
-
-2. Linkni menga yubor.
-
-
-3. Keyin ichki sahifalar va wallet funksiyasiga o'tamiz.
-
-
-
-Agar hohlasang, men keyingi qismga ham o‘taman. Aytsa bo‘ldi.
-
