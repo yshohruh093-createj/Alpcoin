@@ -2,101 +2,152 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alpcoin - Rasmiy Sayt</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alpcoin Official</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: url('https://i.postimg.cc/N0dBzmtd/bg-mountain-sea.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      text-align: center;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
-    .container {
+    body {
+      background: url('https://i.postimg.cc/zB0H91Zc/mountain-sea-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
-      gap: 20px;
-      backdrop-filter: brightness(0.8);
+      padding: 1rem 2rem;
     }
 
     .logo {
-      max-width: 150px;
+      height: 60px;
     }
 
-    .lang-wallet {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      gap: 10px;
+    nav a {
+      margin-left: 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
     }
 
-    .lang-select, .wallet-btn {
-      padding: 8px 12px;
-      border: none;
+    .main {
+      text-align: center;
+      margin-top: 10vh;
+    }
+
+    .main h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 0.5rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 1px solid white;
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.2);
       color: white;
-      cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
     }
 
-    .main-btn {
-      padding: 14px 28px;
-      font-size: 18px;
-      background-color: #00aaff;
-      border: none;
-      border-radius: 30px;
-      color: white;
-      cursor: pointer;
-      transition: 0.3s;
+    .btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
-    .main-btn:hover {
-      background-color: #0088cc;
-    }
-
-    .socials {
-      position: absolute;
-      bottom: 20px;
+    .footer {
       display: flex;
-      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.5);
     }
 
     .socials a {
+      margin-right: 1rem;
       color: white;
-      font-size: 24px;
       text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .lang-wallet {
+      display: flex;
+      gap: 1rem;
+    }
+
+    select, button {
+      padding: 6px 12px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .main h1 {
+        font-size: 2rem;
+      }
+
+      .footer {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .socials a {
+        margin-right: 0.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="lang-wallet">
-    <select class="lang-select">
-      <option>🇺🇿 UZ</option>
-      <option>🇷🇺 RU</option>
-      <option>🇺🇸 EN</option>
-    </select>
-    <button class="wallet-btn">🔗 Connect Wallet</button>
-  </div>
 
-  <div class="container">
-    <img class="logo" src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
+  <header>
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo">
+    <nav>
+      <a href="info.html">About</a>
+      <a href="airdrop.html">Airdrop</a>
+    </nav>
+  </header>
+
+  <div class="main">
     <h1>Kelajakni birga quramiz</h1>
-    <button class="main-btn" onclick="location.href='main.html'">🔓 Enter Website</button>
+    <div class="buttons">
+      <a href="info.html" class="btn">📘 About Alpcoin</a>
+      <a href="airdrop.html" class="btn">🎁 Claim Airdrop</a>
+      <a href="#" class="btn">🚪 Enter Website</a>
+    </div>
   </div>
 
-  <div class="socials">
-    <a href="https://t.me/alpcoinoficcal" target="_blank">📢</a>
-    <a href="https://www.instagram.com/alpcoinofficial" target="_blank">📸</a>
-    <a href="https://youtube.com/@alpcoinofficial?si=Tesi_G78kQVG9qYw" target="_blank">▶️</a>
-    <a href="https://twitter.com/AlpcoinGlobal" target="_blank">🐦</a>
+  <div class="footer">
+    <div class="socials">
+      <a href="https://t.me/alpcoinoficcal" target="_blank">Telegram</a>
+      <a href="https://twitter.com/AlpcoinGlobal" target="_blank">Twitter</a>
+      <a href="https://www.instagram.com/alpcoinofficial" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@alpcoinofficial" target="_blank">YouTube</a>
+    </div>
+    <div class="lang-wallet">
+      <select>
+        <option>🇺🇿 O'zbekcha</option>
+        <option>🇬🇧 English</option>
+      </select>
+      <button>🔗 Connect Wallet</button>
+    </div>
   </div>
+
 </body>
 </html>
