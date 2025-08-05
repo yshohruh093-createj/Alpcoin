@@ -1,93 +1,99 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alpcoin</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: url('https://i.postimg.cc/RZSN0MPJ/id53b3.jpg') no-repeat center center fixed;
-      background-size: cover;
       font-family: Arial, sans-serif;
+      background: url('https://i.postimg.cc/sgPY6Zb0/mountain-sea-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
     }
 
     .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6); /* matn o'qilishi uchun fon ustida qora qatlam */
-      z-index: 1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.5);
+      min-height: 100vh;
+      padding: 40px 20px;
       text-align: center;
-      color: white;
-      padding-top: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .logo {
-      width: 150px;
+      width: 180px;
+      height: auto;
+      margin-bottom: 30px;
     }
 
-    .social-icons {
-      margin-top: 30px;
+    .title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px #000;
     }
 
-    .social-icons a {
-      color: white;
-      font-size: 26px;
-      margin: 0 10px;
-      text-decoration: none;
-      transition: transform 0.2s ease;
-    }
-
-    .social-icons a:hover {
-      transform: scale(1.2);
-    }
-
-    .btn-group {
-      margin-top: 40px;
-    }
-
-    .button {
-      padding: 12px 30px;
-      margin: 10px;
+    .btn {
+      padding: 14px 28px;
+      font-size: 18px;
       border: none;
-      border-radius: 30px;
-      background: #00b894;
-      color: white;
-      font-size: 16px;
+      border-radius: 12px;
+      margin: 10px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      background-color: #00b894;
+      color: white;
+      transition: 0.3s;
+      box-shadow: 2px 2px 8px #000;
     }
 
-    .button:hover {
-      background: #019875;
+    .btn:hover {
+      background-color: #019875;
+    }
+
+    .socials {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .socials a img {
+      width: 36px;
+      height: 36px;
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 26px;
+      }
+
+      .btn {
+        padding: 12px 20px;
+        font-size: 16px;
+      }
+
+      .logo {
+        width: 140px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="overlay"></div>
-  <div class="content">
-    <img class="logo" src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo">
-    <h1>Kelajakni birga quramiz</h1>
+  <div class="overlay">
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo"/>
+    <div class="title">Kelayotgan kelajakni birga quramiz</div>
+    <button class="btn">Enter Website</button>
+    <button class="btn">Connect Wallet</button>
 
-    <div class="social-icons">
-      <a href="https://instagram.com/alpcoinofficial" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://t.me/alpcoinoficcal" target="_blank"><i class="fab fa-telegram"></i></a>
-      <a href="https://twitter.com/AlpcoinGlobal" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://youtube.com/@alpcoinofficial" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
-
-    <div class="btn-group">
-      <button class="button">Connect Wallet</button>
-      <button class="button" onclick="location.href='main.html'">🚀 Kelajakka kirish</button>
+    <div class="socials">
+      <a href="https://t.me/alpcoinoficcal" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"></a>
+      <a href="https://twitter.com/AlpcoinGlobal" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter"></a>
+      <a href="https://instagram.com/alpcoinofficial" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+      <a href="https://youtube.com/@alpcoinofficial" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Youtube%28amin%29.png" alt="YouTube"></a>
     </div>
   </div>
 </body>
