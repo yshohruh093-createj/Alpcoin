@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin - Welcome to the Future</title>
+  <title>Alpcoin - Kelajakka kirish</title>
   <style>
     body {
       margin: 0;
@@ -13,26 +13,21 @@
       color: white;
       text-align: center;
     }
-
     header {
       padding: 20px;
     }
-
     header img {
       max-width: 150px;
       margin-bottom: 10px;
     }
-
     h1 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
-
     p {
       font-size: 1.2rem;
       margin-bottom: 1rem;
     }
-
     .button {
       background-color: #0b74de;
       color: white;
@@ -44,43 +39,35 @@
       margin: 10px;
       transition: 0.3s;
     }
-
     .button:hover {
       background-color: #095ab3;
     }
-
     .lang-select {
       position: absolute;
       top: 20px;
       right: 20px;
     }
-
     .lang-select select {
       padding: 5px 10px;
       font-size: 1rem;
     }
-
     .socials {
       margin-top: 20px;
     }
-
     .socials a {
       margin: 0 10px;
       color: white;
       font-size: 1.5rem;
       text-decoration: none;
     }
-
     .wallet-btn {
       margin-top: 20px;
     }
-
     footer {
       margin-top: 50px;
       font-size: 0.9rem;
       color: #ddd;
     }
-
     .ad-banner {
       margin: 30px auto;
       background: rgba(0,0,0,0.5);
@@ -89,7 +76,6 @@
       border-radius: 10px;
       font-size: 1.2rem;
     }
-
     @media (max-width: 768px) {
       h1 { font-size: 1.8rem; }
       p { font-size: 1rem; }
@@ -132,29 +118,6 @@
   <footer>
     &copy; 2025 Alpcoin. All rights reserved.
   </footer>
-<footer>
-    <select class="language">
-      <option>UZ</option>
-      <option>EN</option>
-    </select>
-  </footer>
-
-  <!-- Bu yerga qo'y -->
-  <!-- Sahifa boshida -->
-  <script src="script.js"></script>
-  <div id="header-placeholder"></div>
-
-  <!-- Sahifa oxirida -->
-  <div id="footer-placeholder"></div>
-
-  <script>
-    fetch('header.html').then(res => res.text()).then(data => {
-      document.getElementById('header-placeholder').innerHTML = data;
-    });
-    fetch('footer.html').then(res => res.text()).then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    });
-  </script>
 
 </body>
 </html>
