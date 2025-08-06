@@ -3,71 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin - Kelajakka kirish</title>
+  <title>Alpcoin - Kelajakka Kirish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: sans-serif;
-      background: url('https://i.postimg.cc/WzYvGbfg/sea-mountain.jpg') no-repeat center center fixed;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://i.postimg.cc/RZSN0MPJ/id53b3.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
       text-align: center;
     }
+
     header {
       padding: 20px;
     }
+
     header img {
-      max-width: 150px;
-      margin-bottom: 10px;
+      max-width: 160px;
     }
+
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px #000;
     }
+
     p {
       font-size: 1.2rem;
-      margin-bottom: 1rem;
+      margin: 10px 0 30px;
+      text-shadow: 1px 1px 4px #000;
     }
-    .button {
-      background-color: #0b74de;
-      color: white;
-      padding: 15px 30px;
-      font-size: 1.1rem;
+
+    .wallet-btn button,
+    .enter-btn {
+      background: #00f7ff;
+      color: black;
       border: none;
+      padding: 14px 28px;
       border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
       cursor: pointer;
       margin: 10px;
       transition: 0.3s;
     }
-    .button:hover {
-      background-color: #095ab3;
+
+    .wallet-btn button:hover,
+    .enter-btn:hover {
+      background: #00c9d4;
     }
-    .lang-select {
+
+    .socials {
+      margin: 20px 0;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      font-size: 1.6rem;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .socials a:hover {
+      transform: scale(1.2);
+      color: #00f7ff;
+    }
+
+    .language-selector {
       position: absolute;
       top: 20px;
       right: 20px;
     }
-    .lang-select select {
+
+    .language-selector select {
       padding: 5px 10px;
+      border-radius: 5px;
       font-size: 1rem;
     }
-    .socials {
-      margin-top: 20px;
-    }
-    .socials a {
-      margin: 0 10px;
-      color: white;
-      font-size: 1.5rem;
-      text-decoration: none;
-    }
-    .wallet-btn {
-      margin-top: 20px;
-    }
+
     footer {
       margin-top: 50px;
       font-size: 0.9rem;
       color: #ddd;
     }
+
     .ad-banner {
       margin: 30px auto;
       background: rgba(0,0,0,0.5);
@@ -76,40 +102,44 @@
       border-radius: 10px;
       font-size: 1.2rem;
     }
-    @media (max-width: 768px) {
+
+    @media(max-width: 768px) {
       h1 { font-size: 1.8rem; }
-      p { font-size: 1rem; }
-      .button { font-size: 1rem; padding: 12px 20px; }
-      .ad-banner { font-size: 1rem; }
+      .wallet-btn button, .enter-btn {
+        font-size: 1rem;
+        padding: 12px 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="lang-select">
+  <div class="language-selector">
     <select>
-      <option value="en">English</option>
-      <option value="uz">O'zbek</option>
-      <option value="ru">Русский</option>
+      <option>UZ</option>
+      <option>EN</option>
+      <option>RU</option>
     </select>
   </div>
 
   <header>
-    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo">
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" />
     <h1>Alpcoin - Kelajakka Kirish</h1>
     <p>Biz bilan kelajakka qadam qo‘ying. Moliyaviy erkinlik, ishonch va barqarorlik!</p>
   </header>
 
   <div class="wallet-btn">
-    <button class="button">Connect Wallet</button>
+    <button>💳 Connect Wallet</button>
   </div>
 
   <div class="socials">
-    <a href="https://t.me/alpcoinoficcal" target="_blank">Telegram</a>
-    <a href="https://instagram.com/alpcoinofficial" target="_blank">Instagram</a>
-    <a href="https://youtube.com/@alpcoinofficial" target="_blank">YouTube</a>
-    <a href="https://x.com/AlpcoinGlobal" target="_blank">Twitter</a>
+    <a href="https://t.me/alpcoinoficcal" target="_blank">📢</a>
+    <a href="https://instagram.com/alpcoinofficial" target="_blank">📷</a>
+    <a href="https://youtube.com/@alpcoinofficial" target="_blank">▶️</a>
+    <a href="https://x.com/AlpcoinGlobal" target="_blank">🐦</a>
   </div>
+
+  <a href="home.html" class="enter-btn">🚀 Kelajakka kirish</a>
 
   <div class="ad-banner">
     Reklama joyi: Bu yerga siz ham o'z loyihangizni joylashtirishingiz mumkin. Biz bilan hamkorlik qiling!
