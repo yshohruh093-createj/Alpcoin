@@ -132,6 +132,31 @@
   <footer>
     &copy; 2025 Alpcoin. All rights reserved.
   </footer>
+<footer>
+    <select class="language">
+      <option>UZ</option>
+      <option>EN</option>
+    </select>
+  </footer>
 
+  <!-- Bu yerga qo'y -->
+  <!-- Sahifa boshida -->
+  <script src="script.js"></script>
+  <div id="header-placeholder"></div>
+
+  <!-- Sahifa oxirida -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('header.html').then(res => res.text()).then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+    });
+    fetch('footer.html').then(res => res.text()).then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+  </script>
+
+</body>
+</html>
 </body>
 </html>
