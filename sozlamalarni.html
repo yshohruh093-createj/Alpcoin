@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sozlamalar | Alpcoin</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .setting-block {
+      margin-bottom: 2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    select, input[type="checkbox"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .switch {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.7rem 1.5rem;
+      background: #1abc9c;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .btn-back:hover {
+      background: #16a085;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sozlamalar</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="setting-block">
+      <label for="language">Sayt tili:</label>
+      <select id="language">
+        <option value="uz">O'zbekcha</option>
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+      </select>
+    </div>
+
+    <div class="setting-block">
+      <label for="darkMode">Qorong'u rejim:</label>
+      <div class="switch">
+        <input type="checkbox" id="darkMode" />
+        <span>Faollashtirish</span>
+      </div>
+    </div>
+
+    <a class="btn-back" href="index.html">Bosh sahifaga qaytish</a>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Alpcoin. Barcha huquqlar himoyalangan.</p>
+  </footer>
+
+</body>
+</html>
