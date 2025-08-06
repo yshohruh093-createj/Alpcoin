@@ -2,43 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Alpcoin - Kirish</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <title>Alpcoin - Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
       font-family: 'Montserrat', sans-serif;
-      background: url('https://i.postimg.cc/wTyzVXnP/bg-mountain-sea.jpg') no-repeat center center fixed;
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('https://i.postimg.cc/wTyzVXnP/bg-mountain-sea.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
       text-align: center;
     }
+    .language {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .language button {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
     .logo {
-      width: 150px;
+      width: 180px;
       margin-bottom: 20px;
     }
     h1 {
-      font-size: 36px;
+      font-size: 38px;
+      font-weight: 700;
       margin-bottom: 10px;
     }
+    p {
+      font-size: 18px;
+      max-width: 400px;
+      margin-bottom: 30px;
+    }
     .buttons {
-      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .btn {
-      background-color: #00b894;
-      color: white;
-      padding: 12px 24px;
+      padding: 14px 28px;
+      font-size: 16px;
       border: none;
       border-radius: 30px;
-      font-size: 16px;
-      margin: 10px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: all 0.3s ease;
+      background-color: #00b894;
+      color: white;
+      font-weight: bold;
     }
     .btn:hover {
       background-color: #019170;
@@ -50,21 +79,31 @@
       gap: 20px;
     }
     .socials a img {
-      width: 30px;
+      width: 28px;
       filter: brightness(0) invert(1);
+      transition: 0.3s;
     }
-    .language {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+    .socials a img:hover {
+      transform: scale(1.2);
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .logo {
+        width: 130px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Language -->
+  <!-- Language Selector -->
   <div class="language">
-    <button class="btn" onclick="alert('Til funksiyasi hali faol emas')">UZ | EN</button>
+    <button onclick="alert('Language switch coming soon')">UZ | EN</button>
   </div>
 
   <!-- Logo -->
@@ -72,11 +111,12 @@
 
   <!-- Title -->
   <h1>Kelajakni birga quramiz</h1>
+  <p>Yangi avlod tokeni — Alpcoin bilan moliyaviy ozodlik sari birinchi qadamni qo'ying.</p>
 
   <!-- Buttons -->
   <div class="buttons">
     <button class="btn" onclick="location.href='home.html'">Enter Website</button>
-    <button class="btn" onclick="alert('Wallet ulanish hali faol emas')">Connect Wallet</button>
+    <button class="btn" onclick="alert('Ton Wallet ulanishi yaqin kunlarda')">Connect Wallet</button>
   </div>
 
   <!-- Social Links -->
