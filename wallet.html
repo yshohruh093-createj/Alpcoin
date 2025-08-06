@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alpcoin Wallet</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('background.jpg'); /* o'zingiz yuklagan fon rasmi */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .lang-select {
+      font-size: 16px;
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .main {
+      margin-top: 100px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 20px;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    .back-home {
+      margin-top: 40px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .btn {
+        width: 80%;
+        font-size: 18px;
+      }
+
+      .logo {
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo">
+    <select class="lang-select">
+      <option value="en">English</option>
+      <option value="uz">O‘zbekcha</option>
+    </select>
+  </header>
+
+  <div class="main">
+    <h1>Connect Your Wallet</h1>
+    <p>To interact with Alpcoin services, please connect your TON wallet.</p>
+    <button class="btn">Connect Wallet</button>
+
+    <div>
+      <a class="back-home" href="index.html">← Back to Home</a>
+    </div>
+  </div>
+
+</body>
+</html>
