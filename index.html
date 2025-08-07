@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Alpcoin - Welcome</title>
+  <title>Alpcoin – Welcome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,79 +13,102 @@
     }
     body {
       font-family: 'Montserrat', sans-serif;
-      height: 100vh;
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                  url('https://i.postimg.cc/wTyzVXnP/bg-mountain-sea.jpg') no-repeat center center fixed;
+      background: url('https://i.postimg.cc/7YB3n02d/mountain-cosmos-bg.jpg') no-repeat center center fixed;
       background-size: cover;
+      height: 100vh;
       color: white;
+      position: relative;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: 1;
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+      height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
-    }
-    .language {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    .language button {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid #fff;
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 14px;
+      padding: 20px;
     }
     .logo {
-      width: 180px;
-      margin-bottom: 20px;
+      width: 160px;
+      margin-bottom: 25px;
+      animation: fadeIn 1.5s ease-in-out;
     }
     h1 {
-      font-size: 38px;
+      font-size: 40px;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      animation: fadeIn 2s ease-in-out;
     }
     p {
       font-size: 18px;
-      max-width: 400px;
-      margin-bottom: 30px;
-    }
-    .buttons {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
+      max-width: 480px;
+      margin-bottom: 35px;
+      animation: fadeIn 2.5s ease-in-out;
     }
     .btn {
-      padding: 14px 28px;
+      padding: 14px 32px;
       font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(45deg, #00b894, #0984e3);
       border: none;
       border-radius: 30px;
       cursor: pointer;
-      transition: all 0.3s ease;
-      background-color: #00b894;
-      color: white;
-      font-weight: bold;
+      transition: 0.4s ease;
+      box-shadow: 0 0 10px #00b894;
+      animation: fadeIn 3s ease-in-out;
     }
     .btn:hover {
-      background-color: #019170;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00cec9;
     }
     .socials {
       position: absolute;
       bottom: 20px;
       display: flex;
-      gap: 20px;
+      gap: 22px;
+      z-index: 2;
     }
     .socials a img {
-      width: 28px;
+      width: 30px;
       filter: brightness(0) invert(1);
-      transition: 0.3s;
+      transition: 0.3s ease;
     }
     .socials a img:hover {
       transform: scale(1.2);
     }
+    .language {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 2;
+    }
+    .language button {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid white;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     @media (max-width: 600px) {
       h1 {
         font-size: 28px;
@@ -94,32 +117,30 @@
         font-size: 16px;
       }
       .logo {
-        width: 130px;
+        width: 120px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Language Selector -->
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Language -->
   <div class="language">
-    <button onclick="alert('Language switch coming soon')">UZ | EN</button>
+    <button onclick="alert('Til tanlash tez orada qo‘shiladi')">UZ | EN</button>
   </div>
 
-  <!-- Logo -->
-  <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo">
-
-  <!-- Title -->
-  <h1>Kelajakni birga quramiz</h1>
-  <p>Yangi avlod tokeni — Alpcoin bilan moliyaviy ozodlik sari birinchi qadamni qo'ying.</p>
-
-  <!-- Buttons -->
-  <div class="buttons">
+  <!-- Content -->
+  <div class="container">
+    <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin Logo" class="logo">
+    <h1>Kelajakni birga quramiz</h1>
+    <p>Alpcoin – yangi avlod uchun ochiq, adolatli va innovatsion kripto ekotizimi.</p>
     <button class="btn" onclick="location.href='home.html'">Enter Website</button>
-    <button class="btn" onclick="alert('Ton Wallet ulanishi yaqin kunlarda')">Connect Wallet</button>
   </div>
 
-  <!-- Social Links -->
+  <!-- Socials -->
   <div class="socials">
     <a href="https://t.me/alpcoinoficcal" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"></a>
     <a href="https://youtube.com/@alpcoinofficial" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
