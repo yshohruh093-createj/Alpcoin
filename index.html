@@ -1,112 +1,288 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alpcoin - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alpcoin • Step‑to‑Earn (Beta)</title>
+  <meta name="description" content="Walk, complete daily goals, and earn Alpcoin points. Connect your TON wallet to join airdrops." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- TonConnect UI (for wallet connect) -->
+  <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    header {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ffd700;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: rgba(0, 0, 0, 0.4);
-    }
-
-    .hero h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 25px;
-    }
-
-    .hero .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #ffd700;
-      color: black;
-      font-weight: bold;
-      border-radius: 25px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .hero .btn:hover {
-      background: #e5c100;
-    }
-
-    footer {
-      background: rgba(0, 0, 0, 0.5);
-      text-align: center;
-      padding: 10px;
-      font-size: 14px;
-    }
+    :root{--bg:#0b1023;--card:#131936;--muted:#9aa3b2;--brand:#4ade80;--brand-2:#22d3ee}
+    html,body{height:100%}
+    body{font-family:Inter,system-ui,Arial,sans-serif;background:radial-gradient(1200px 800px at 80% -10%, rgba(34,211,238,.25),transparent 60%),radial-gradient(1000px 700px at -10% 120%, rgba(74,222,128,.18),transparent 60%),var(--bg);color:#fff}
+    .glass{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));backdrop-filter: blur(10px);border:1px solid rgba(255,255,255,.08)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:16px;padding:.9rem 1.1rem;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#0a0f1f}
+    .btn-muted{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
+    .btn[disabled]{opacity:.5;cursor:not-allowed}
+    .chip{padding:.25rem .6rem;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:.75rem}
+    .progress{height:12px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden;border:1px solid rgba(255,255,255,.1)}
+    .progress>div{height:100%;background:linear-gradient(90deg,var(--brand),var(--brand-2))}
   </style>
 </head>
 <body>
+  <div class="min-h-full flex flex-col">
+    <!-- Header -->
+    <header class="w-full px-4 sm:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="https://i.postimg.cc/RZSN0MPJ/id53b3.jpg" alt="Alpcoin" class="w-9 h-9 rounded-xl object-cover" />
+        <div class="leading-tight">
+          <div class="text-lg font-extrabold tracking-tight">Alpcoin</div>
+          <div class="text-xs text-[var(--muted)] -mt-0.5">Step‑to‑Earn • Beta</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="chip hidden sm:inline-flex" id="networkChip">TON Mainnet</span>
+        <div id="ton-connect" class="flex"></div>
+      </div>
+    </header><!-- Main -->
+<main class="flex-1 px-4 sm:px-8 pb-20 max-w-5xl w-full mx-auto">
+  <section class="glass rounded-2xl p-5 sm:p-7 mt-2">
+    <div class="flex flex-col sm:flex-row gap-6 items-start">
+      <div class="flex-1">
+        <h1 class="text-2xl sm:text-3xl font-extrabold">Win daily with your steps</h1>
+        <p class="text-sm text-[var(--muted)] mt-1">Hit the daily goal or watch a short ad to unlock a scratch card. Earn <strong>ALP points</strong> now and join on‑chain airdrops with your TON wallet.</p>
 
-  <header>
-    <h1>Alpcoin</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="tokenomics.html">Tokenomics</a>
-      <a href="partners.html">Partners</a>
-      <a href="airdrop.html">Airdrop</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+        <div class="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="glass rounded-xl p-4">
+            <div class="text-xs text-[var(--muted)]">Today Steps</div>
+            <div class="text-2xl font-extrabold" id="steps">0</div>
+          </div>
+          <div class="glass rounded-xl p-4">
+            <div class="text-xs text-[var(--muted)]">Goal</div>
+            <div class="text-2xl font-extrabold" id="goal">2000</div>
+          </div>
+          <div class="glass rounded-xl p-4">
+            <div class="text-xs text-[var(--muted)]">ALP Points</div>
+            <div class="text-2xl font-extrabold" id="points">0</div>
+          </div>
+          <div class="glass rounded-xl p-4">
+            <div class="text-xs text-[var(--muted)]">Streak</div>
+            <div class="text-2xl font-extrabold" id="streak">0</div>
+          </div>
+        </div>
 
-  <div class="hero">
-    <h2>Kelajakni Birga Quramiz</h2>
-    <p>Alpcoin — Yangi imkoniyatlar va ishonchli kelajak sari qadam.</p>
-    <a href="tokenomics.html" class="btn">Batafsil</a>
-  </div>
+        <div class="mt-6">
+          <div class="progress"><div id="progressBar" style="width:0%"></div></div>
+          <div class="mt-2 text-xs text-[var(--muted)]"><span id="percent">0%</span> completed</div>
+        </div>
 
-  <footer>
-    © 2025 Alpcoin. All rights reserved.
-  </footer>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <button id="btnStart" class="btn btn-muted">Start</button>
+          <button id="btnPause" class="btn btn-muted">Pause</button>
+          <button id="btnReset" class="btn btn-muted">Reset</button>
+          <button id="btnSimulate" class="btn btn-muted hidden">Simulate 100 steps</button>
+        </div>
+      </div>
 
-</body>
+      <div class="w-full sm:w-[340px] glass rounded-2xl p-5">
+        <div class="text-sm font-semibold">Unlock today’s draw</div>
+        <div class="text-xs text-[var(--muted)]">Hit the step goal or skip with a short ad.</div>
+
+        <div class="mt-4 flex items-center justify-between">
+          <div class="text-lg font-extrabold" id="unlockState">0 / 2000</div>
+          <span class="chip" id="lockChip">Locked</span>
+        </div>
+
+        <button id="btnWatchAd" class="btn btn-primary w-full mt-4">Watch Ad to Skip</button>
+        <div id="adTimer" class="text-center text-xs text-[var(--muted)] mt-2 hidden">Ad: <span id="adCountdown">30</span>s</div>
+
+        <button id="btnScratch" class="btn btn-muted w-full mt-3" disabled>Open Scratch Card</button>
+        <button id="btnClaim" class="btn btn-primary w-full mt-3" disabled>Claim 5 ALP Points</button>
+        <div class="text-[11px] text-[var(--muted)] mt-2">* Points are off‑chain rewards stored on your device for now. On‑chain claims open during airdrops.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid sm:grid-cols-3 gap-4 mt-6">
+    <div class="glass rounded-2xl p-5">
+      <div class="font-semibold">Airdrop (On‑chain)</div>
+      <p class="text-sm text-[var(--muted)] mt-1">Connect your wallet and verify your address to be eligible for ALP airdrops.</p>
+      <button id="btnVerify" class="btn btn-muted mt-3">Verify Address</button>
+      <div id="verifyNote" class="text-[11px] text-[var(--muted)] mt-2 hidden">Address verified ✓</div>
+    </div>
+    <div class="glass rounded-2xl p-5">
+      <div class="font-semibold">Referral Boost</div>
+      <p class="text-sm text-[var(--muted)] mt-1">Share your invite link. Each active friend adds +2% to your daily points (up to +20%).</p>
+      <button id="btnCopyRef" class="btn btn-muted mt-3">Copy Invite Link</button>
+      <div id="copyToast" class="text-[11px] text-[var(--muted)] mt-2 hidden">Copied!</div>
+    </div>
+    <div class="glass rounded-2xl p-5">
+      <div class="font-semibold">Fair‑Play</div>
+      <p class="text-sm text-[var(--muted)] mt-1">We detect abnormal motion to keep it fair. Manual adds are limited.</p>
+      <button id="btnManual" class="btn btn-muted mt-3">+50 Steps (limit)</button>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="px-4 sm:px-8 py-8 text-center text-xs text-[var(--muted)]">
+  © <span id="year"></span> Alpcoin. All rights reserved. • <a class="underline" href="https://t.me/alpcoinoficcal" target="_blank" rel="noopener">Telegram</a> • <a class="underline" href="https://youtube.com/@alpcoinofficial" target="_blank" rel="noopener">YouTube</a> • <a class="underline" href="https://www.instagram.com/alpcoinofficial" target="_blank" rel="noopener">Instagram</a> • <a class="underline" href="https://x.com/AlpcoinGlobal" target="_blank" rel="noopener">Twitter</a>
+</footer>
+
+  </div><script>
+// ----------------------------
+// Simple local storage helpers
+// ----------------------------
+const store = {
+  get(k, d){ try { return JSON.parse(localStorage.getItem(k)) ?? d } catch(e){ return d } },
+  set(k, v){ localStorage.setItem(k, JSON.stringify(v)) }
+}
+
+// ----------------------------
+// App state
+// ----------------------------
+const STATE = {
+  goal: store.get('alp_goal', 2000),
+  steps: 0,
+  points: store.get('alp_points', 0),
+  streak: store.get('alp_streak', 0),
+  verified: store.get('alp_verified', false),
+  lastDay: store.get('alp_last_day', null),
+  adSkippedToday: false,
+  running: false
+}
+
+// Reset daily steps at midnight (or first open of day)
+function ensureDailyReset(){
+  const today = new Date().toDateString();
+  if(STATE.lastDay !== today){
+    STATE.lastDay = today; STATE.steps = 0; STATE.adSkippedToday = false; STATE.running = false;
+    store.set('alp_last_day', today); store.set('alp_steps_'+today, 0);
+  } else {
+    STATE.steps = store.get('alp_steps_'+today, 0);
+  }
+}
+ensureDailyReset();
+
+// ----------------------------
+// UI elements
+// ----------------------------
+const el = id => document.getElementById(id)
+const stepsEl = el('steps'), goalEl = el('goal'), pointsEl = el('points'), streakEl = el('streak')
+const progressBar = el('progressBar'), percentEl = el('percent'), unlockEl = el('unlockState'), lockChip = el('lockChip')
+const btnStart = el('btnStart'), btnPause = el('btnPause'), btnReset = el('btnReset'), btnSim = el('btnSimulate')
+const btnWatchAd = el('btnWatchAd'), adTimer = el('adTimer'), adCountdown = el('adCountdown'), btnScratch = el('btnScratch'), btnClaim = el('btnClaim')
+const btnVerify = el('btnVerify'), verifyNote = el('verifyNote'), btnCopyRef = el('btnCopyRef'), copyToast = el('copyToast'), btnManual = el('btnManual')
+
+goalEl.textContent = STATE.goal
+pointsEl.textContent = STATE.points
+streakEl.textContent = STATE.streak
+el('year').textContent = new Date().getFullYear()
+
+function updateUI(){
+  stepsEl.textContent = STATE.steps
+  const pct = Math.min(100, Math.round(STATE.steps / STATE.goal * 100))
+  progressBar.style.width = pct + '%'
+  percentEl.textContent = pct + '%'
+  unlockEl.textContent = `${STATE.steps} / ${STATE.goal}`
+
+  const unlocked = STATE.steps >= STATE.goal || STATE.adSkippedToday
+  lockChip.textContent = unlocked ? 'Unlocked' : 'Locked'
+  btnScratch.disabled = !unlocked
+  btnClaim.disabled = !unlocked
+
+  store.set('alp_points', STATE.points)
+  store.set('alp_steps_'+new Date().toDateString(), STATE.steps)
+}
+updateUI()
+
+// ----------------------------
+// Very simple step detection (DeviceMotion)
+// ----------------------------
+let lastPeak = 0, stepBuf = []
+function onMotion(e){
+  const a = e.accelerationIncludingGravity
+  if(!a) return
+  const mag = Math.sqrt((a.x||0)**2 + (a.y||0)**2 + (a.z||0)**2)
+  const now = performance.now()
+  stepBuf.push(mag); if(stepBuf.length>5) stepBuf.shift()
+  const avg = stepBuf.reduce((s,v)=>s+v,0)/stepBuf.length
+  const isPeak = mag > (avg+1.2) && (now-lastPeak)>300 // ~2–3 Hz
+  if(isPeak){ lastPeak = now; STATE.steps++; updateUI() }
+}
+
+async function start(){
+  if(typeof DeviceMotionEvent !== 'undefined' && typeof DeviceMotionEvent.requestPermission === 'function'){
+    try{ const p = await DeviceMotionEvent.requestPermission(); if(p !== 'granted') return alert('Please allow Motion access to count steps.') }catch(e){ console.warn(e) }
+  }
+  window.addEventListener('devicemotion', onMotion)
+  STATE.running = true
+}
+function pause(){ window.removeEventListener('devicemotion', onMotion); STATE.running = false }
+function reset(){ STATE.steps = 0; STATE.adSkippedToday = false; updateUI() }
+
+btnStart.onclick = start
+btnPause.onclick = pause
+btnReset.onclick = reset
+btnManual.onclick = ()=>{ // small manual add, anti‑abuse limited by lock
+  if(STATE.steps < STATE.goal - 200){ STATE.steps = Math.min(STATE.goal, STATE.steps + 50); updateUI() }
+}
+
+// Enable simulator in desktop environments
+if(!('ontouchstart' in window)){ btnSim.classList.remove('hidden'); btnSim.onclick = ()=>{ STATE.steps += 100; updateUI() } }
+
+// ----------------------------
+// Ad skip simulation (client‑side timer)
+// ----------------------------
+btnWatchAd.onclick = ()=>{
+  if(STATE.adSkippedToday) return
+  adTimer.classList.remove('hidden')
+  let t = 30; adCountdown.textContent = t
+  btnWatchAd.disabled = true
+  const id = setInterval(()=>{ t--; adCountdown.textContent = t; if(t<=0){ clearInterval(id); STATE.adSkippedToday = true; updateUI(); adTimer.classList.add('hidden'); btnWatchAd.textContent = 'Skipped for Today ✓' } }, 1000)
+}
+
+// ----------------------------
+// Scratch card (simple)
+// ----------------------------
+btnScratch.onclick = ()=>{
+  // 30% chance to add bonus points 0/5/10
+  const r = Math.random()
+  const reward = r>0.7 ? 10 : r>0.4 ? 5 : 0
+  alert(reward ? `Congrats! You won +${reward} ALP points.` : 'No luck this time. Try again tomorrow!')
+  STATE.points += reward
+  updateUI()
+}
+
+btnClaim.onclick = ()=>{
+  STATE.points += 5; updateUI(); alert('Claimed +5 ALP points!')
+  // Increase streak on first claim of the day
+  const k = 'alp_claimed_'+new Date().toDateString()
+  if(!store.get(k,false)){ store.set(k,true); STATE.streak++; store.set('alp_streak', STATE.streak); streakEl.textContent = STATE.streak }
+}
+
+// ----------------------------
+// TonConnect (connect wallet + simple address verify)
+// ----------------------------
+const tc = new TON_CONNECT_UI.TonConnectUI({
+  manifestUrl: location.origin + '/tonconnect-manifest.json',
+  buttonRootId: 'ton-connect',
+})
+
+async function waitForWallet(){ try { return await tc.connectionRestored } catch { return null } }
+waitForWallet().then(()=>{
+  // noop – UI handles the rest
+})
+
+btnVerify.onclick = async ()=>{
+  const acc = tc.account
+  if(!acc){ return alert('Connect TON wallet first.') }
+  // Lightweight proof: save connected address as verified (server‑side verification can be added later)
+  STATE.verified = true; store.set('alp_verified', true); verifyNote.classList.remove('hidden'); alert('Address verified for airdrop eligibility!')
+}
+
+// Network chip
+const netMap = { '-239': 'TON Testnet', '0': 'TON Mainnet' }
+setInterval(()=>{
+  const n = tc?.wallet?.device?.platform || 'Wallet'
+  const chain = tc?.account?.chain ?? 0
+  document.getElementById('networkChip').textContent = netMap[String(chain)] || 'TON'
+}, 1000)
+
+</script></body>
 </html>
